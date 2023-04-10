@@ -33,6 +33,7 @@ from django.utils.encoding import force_bytes
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
 from django.views.decorators.csrf import csrf_exempt
+from django.urls import reverse_lazy,reverse
 
 
 # Create your views here.
@@ -165,8 +166,11 @@ def login_user(request):
         if user is not None:
             login(request, user)
             if request.user.is_patient:   
-                messages.success(request, 'User Logged in Successfully')    
-                return redirect('patient-dashboard')
+                messages.success(request, 'User Logged in Successfully')  
+                #return redirect(reverse('mood:mood')) 
+                #return redirect('patient-dashboard')
+                #return redirect('navbar_home.html')
+                return redirect(reverse('mood:mood'))
                 
             else:
                 messages.error(request, 'Invalid credentials. Not a Patient')

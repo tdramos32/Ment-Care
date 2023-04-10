@@ -1,0 +1,25 @@
+{% load static %}
+   
+<link rel="stylesheet" href="{% static 'mood/style.css' %}">
+
+<div class="intro">
+    <div class="hello">
+        <h1>Hello {{ user.username}}</h1>
+    </div>
+    <div class="sometext">
+        <h2>Rate Your day From 1-10</h2>
+    </div>
+
+    <div class="form-class">
+
+
+        <form action="" method="post">
+            {% csrf_token %}
+
+            <input type="number" max="10" min="1" name = 'val'>
+            <button>Submit</button>
+        </form>
+    </div>
+
+
+</div>
