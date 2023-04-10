@@ -144,6 +144,8 @@ def chat_doctor(request):
 def pharmacy_shop(request):
     return render(request, 'pharmacy/shop.html')
 
+
+
 @csrf_exempt
 def login_user(request):
     page = 'patient_login'
@@ -165,6 +167,7 @@ def login_user(request):
             if request.user.is_patient:   
                 messages.success(request, 'User Logged in Successfully')    
                 return redirect('patient-dashboard')
+                
             else:
                 messages.error(request, 'Invalid credentials. Not a Patient')
                 return redirect('logout')
