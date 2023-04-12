@@ -70,6 +70,13 @@ class Patient(models.Model):
     dob = models.CharField(max_length=200, null=True, blank=True)
     nid = models.CharField(max_length=200, null=True, blank=True)
     serial_number = models.CharField(max_length=200, null=True, blank=True)
+    #New MentCare patient requirments
+    is_on_suicide_watch = models.BooleanField(default=False)
+    is_violent = models.BooleanField(default=False)
+    appointment_alert = models.BooleanField(default=False)
+    prescriptions = models.CharField(max_length=None)
+    has_been_sectioned = models.BooleanField(default=False)
+
     
     # Chat
     login_status = models.CharField(max_length=200, null=True, blank=True, default="offline")
