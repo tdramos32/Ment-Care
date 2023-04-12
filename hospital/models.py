@@ -74,7 +74,7 @@ class Patient(models.Model):
     is_on_suicide_watch = models.BooleanField(default=False)
     is_violent = models.BooleanField(default=False)
     appointment_alert = models.BooleanField(default=False)
-    prescriptions = models.CharField(max_length=500)
+    prescriptions = models.CharField(max_length=500, null=True, blank=True)
     has_been_sectioned = models.BooleanField(default=False)
 
     
