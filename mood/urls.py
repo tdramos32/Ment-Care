@@ -4,4 +4,4 @@ app_name = 'mood'
 
 urlpatterns = [
     path('',views.mood, name = 'mood'),
-]
+] 

@@ -3,12 +3,13 @@ from datetime import date
 from datetime import datetime
 
 # Create your models here.
-class MoodModel(models.Model):
+class Mood(models.Model):
     user = models.CharField(max_length=100)
-    mood = models.IntegerField()
+    input = models.CharField(max_length=100)
+    label = models.CharField(max_length=100)
     date = models.DateField(auto_now_add=True, null=True)
 
 
 
     def __str__(self):
-        return f'{self.user} : {self.mood} : {self.date}'
+        return f'{self.user} : {self.input} : {self.label} : {self.date}'
