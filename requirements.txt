@@ -20,3 +20,5 @@ whitenoise==6.2.0
 widgetsnbextension==3.5.2
 xhtml2pdf==0.2.8
 tk
+numpy
+transformers

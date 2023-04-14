@@ -7,7 +7,7 @@
         <h1>Hello {{ user.username}}</h1>
     </div>
     <div class="sometext">
-        <h2>Rate Your day From 1-10</h2>
+        <h2>How Are You Feeling Now</h2>
     </div>
 
     <div class="form-class">
@@ -15,11 +15,15 @@
 
         <form action="" method="post">
             {% csrf_token %}
+            <div>
+                <input type="text" placeholder = "Enter How you are feeling"  name = "mood" required>
+            </div>
 
-            <input type="number" max="10" min="1" name = 'val'>
+       
             <button>Submit</button>
         </form>
     </div>
+    
 
 
 </div>
