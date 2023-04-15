@@ -22,3 +22,4 @@ xhtml2pdf==0.2.8
 tk
 numpy
 transformers
+djangorestframework-simplejwt
