@@ -23,6 +23,7 @@ class record(models.Model):
         ('3', 'Engaged'),
         ('4', 'In a Relationship'),
         ('5', "It's Complicated"),
+        ('6', 'Prefer not to say'),
     )
     relationship_status = forms.MultipleChoiceField(choices=relationship_choices)
 
@@ -30,8 +31,8 @@ class record(models.Model):
         ('1','Mr.'),
         ('2','Mrs.'),
         ('3','Miss'),
-        ('4','Dr.')
-        ('5','NONE')
+        ('4','Dr.'),
+        ('5','None'),
     )
     suffix = forms.MultipleChoiceField(choices=suffix_choices)
     children_count = models.IntegerField(default=0,null=True,blank=True)
