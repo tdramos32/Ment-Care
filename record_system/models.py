@@ -38,5 +38,5 @@ class record(models.Model):
     patient_history = models.TextField(null=True, blank=True)
 
     def __str__(self) -> str:
-        return 
+        return(self.patient_name + "'s Mental Health Report") 
 
