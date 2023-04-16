@@ -3,6 +3,8 @@ from django import forms
 
 # Create your models here.
 class record(models.Model):
+    doctor_id = models.AutoField(primary_key=True) 
+    doctor_name = models.AutoField(primary_key=True) 
     patient_name = models.CharField(max_length=100, null=True, blank=True)
     patient_dob = models.DateField(auto_now_add=True, null=True)
     patient_id = models.AutoField(primary_key=True)
@@ -35,4 +37,6 @@ class record(models.Model):
     children_count = models.IntegerField(default=0,null=True,blank=True)
     patient_history = models.TextField(null=True, blank=True)
 
+    def __str__(self) -> str:
+        return 
 
