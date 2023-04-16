@@ -4,7 +4,7 @@ from django import forms
 # Create your models here.
 class record(models.Model):
     doctor_id = models.AutoField(primary_key=True) 
-    doctor_name = models.AutoField(primary_key=True) 
+    doctor_name = models.CharField(max_length=100, null=True, blank=True) 
     patient_name = models.CharField(max_length=100, null=True, blank=True)
     patient_dob = models.DateField(auto_now_add=True, null=True)
     patient_id = models.AutoField(primary_key=True)
