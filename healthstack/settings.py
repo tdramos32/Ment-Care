@@ -57,7 +57,7 @@ INSTALLED_APPS = [
     'debug_toolbar',
     'record_system.apps.RecordSystemConfig'
  
-
+ 
 ]
 
 MIDDLEWARE = [

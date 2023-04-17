@@ -3,11 +3,11 @@ from django import forms
 
 # Create your models here.
 class record(models.Model):
-    doctor_id = models.AutoField(primary_key=True) 
+    patient_id = models.AutoField(primary_key=True)
+    doctor_id = models.IntegerField(null=True, blank=True)
     doctor_name = models.CharField(max_length=100, null=True, blank=True) 
     patient_name = models.CharField(max_length=100, null=True, blank=True)
     patient_dob = models.DateField(auto_now_add=True, null=True)
-    patient_id = models.AutoField(primary_key=True)
     patient_age = models.IntegerField(null=True, blank=True)
     patient_diagnoses = models.TextField(max_length=1500, null=True, blank=True)
     patient_drugs = models.TextField(max_length=1500, null=True, blank=True)
@@ -16,7 +16,7 @@ class record(models.Model):
     has_been_sectioned = models.BooleanField(default=False)
     is_sectioned = models.BooleanField(default=False)
     is_violent = models.BooleanField(default=False)
-    
+
     relationship_choices = (
         ('1', 'Single'),
         ('2', 'Married'),
