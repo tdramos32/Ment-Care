@@ -23,4 +23,4 @@ tk
 numpy
 transformers
 djangorestframework-simplejwt
-torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+#torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
