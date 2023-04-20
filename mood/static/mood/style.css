@@ -118,6 +118,12 @@ button{
 button{
   margin-top: 35px;
 }
+body{
+  background-color: white;
+}
+*{
+  color: black;
+}
 
 
 
