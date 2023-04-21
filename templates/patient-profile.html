@@ -190,6 +190,11 @@
                           ><span> Medical Records</span></a
                         >
                       </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#mood_records" data-toggle="tab"
+                          ><span> Patient Moods</span></a
+                        >
+                      </li>
                 
                     </ul>
                   </div>
@@ -424,6 +429,74 @@
                 </div>
               </div>
             </div>
+            <!--Start of mood-records-->
+            <div class="tab-pane fade" id="mood_records">
+              <div class="text-right">
+              </div>
+              <div class="card card-table mb-0">
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table table-hover table-center mb-0">
+                      <thead>
+                        <tr>
+                          <th>Patient</th>
+                          <th>Input</th>
+                          <th>Label</th>
+                          <th>Date</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {% for m in mood %}
+                        <tr>
+                          <td>
+                            <h2 class="table-avatar">
+                              <a
+                                href="#"
+                                class="avatar avatar-sm mr-2"
+                              >
+                                <img
+                                  class="avatar-img rounded-circle"
+                                  src="{{patient.featured_image.url}}"
+                                  alt="User Image"
+                                />
+                              </a>
+                              <a href="#"
+                                >{{patient.name}} </a
+                              >
+                            </h2>
+                          </td>
+                          <td>{{m.input}}</td>
+                          <td>
+                            {{m.label}}
+                           
+                          </td>
+                          
+                          <td>
+                            {{m.date}}
+                            
+                          </td>
+                          
+                        </tr>
+                        {% endfor %}
+                        </tr>
+                      </tbody>
+                    </table>
+
+            
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="tab-pane fade" id="mood_records">
+    {% for m in mood%}
+    {{m.input}}
+    {% endfor %}
+  </div> -->
+    <!--End of mood records-->
+
           </div>
         </div>
       </div>
