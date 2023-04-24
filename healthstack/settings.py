@@ -55,8 +55,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'ChatApp.apps.ChatappConfig',
     'debug_toolbar',
+    'record_system.apps.RecordSystemConfig'
  
-
+ 
 ]
 
 MIDDLEWARE = [

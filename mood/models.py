@@ -8,7 +8,7 @@ class Mood(models.Model):
     input = models.CharField(max_length=100)
     label = models.CharField(max_length=100)
     date = models.DateField(auto_now_add=True, null=True)
-
+    
 
 
     def __str__(self):

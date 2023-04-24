@@ -22,3 +22,5 @@ xhtml2pdf==0.2.8
 tk
 numpy
 transformers
+djangorestframework-simplejwt
+#torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
