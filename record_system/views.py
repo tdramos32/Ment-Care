@@ -10,10 +10,16 @@ from hospital.models import Patient
 from datetime import datetime
 from record_system.models import appointment_notes, record, diagnoses_info
 # Create your views here.
-class ViewPDF(View):
+class ViewAppointmentPDF(View):
     def get(self, request, *args, **kwargs):
         pdf = render_to_pdf('app/pdf_record_template', data)
-
+class ViewPatientFullPDF(View):
+    def get(self, request, *args, **kwargs):
+        pdf = render_to_pdf('app/pdf_record_template', data)
+class ViewPatientSummaryPDF(View):
+    def get(self, request, *args, **kwargs):
+        pdf = render_to_pdf('app/pdf_record_template', data)
+        
 def render_to_pdf(template_src, context_dict={}):
     template=get_template(template_src)
     html=template.render(context_dict)
