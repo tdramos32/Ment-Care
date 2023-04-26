@@ -13,7 +13,7 @@
 
     	<!-- Favicon -->
 
-    	<link rel="shortcut icon" type="image/x-icon" href="{% static 'HealthStack-System/images/Normal/favicon.png' %}"/>
+    	<link rel="shortcut icon" type="image/x-icon" href="{% static 'Health_Staff/images/Normal/favicon.png' %}"/>
 
 
 		
@@ -27,10 +27,10 @@
 	
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{% static 'HealthStack-System/css/Normal/bootstrap.min.css' %}"> 
+    <link rel="stylesheet" href="{% static 'Health_Staff/css/Normal/bootstrap.min.css' %}"> 
 		
     <!-- Fontawesome CSS -->
-    <link rel="stylesheet" href="{% static 'HealthStack-System/plugins/Normal/fontawesome/css/fontawesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'Health_Staff/plugins/Normal/fontawesome/css/fontawesome.min.css' %}">
     
     <!-- Feathericon CSS -->
     <link rel="stylesheet" href="{% static 'HealthStack-System/admin_assets/css/feathericon.min.css'%}">
@@ -66,17 +66,14 @@
             <div class="page-wrapper">
 			
                 <div class="content container-fluid">
-                    <div class="">
-						<a href="{% url 'add-test' %}"  class="fe fe-plus btn btn-primary float-right mt-2 ">Add Test</a>
-					</div>
 					
 					<!-- Page Header -->
 					<div class="page-header">
 						<div class="row">
 							<div class="col-sm-12">
-								<h3 class="page-title">Test List</h3>
+								<h3 class="page-title">Welcome Admin!</h3>
 								<ul class="breadcrumb">
-									<li class="breadcrumb-item active"></li>
+									<li class="breadcrumb-item active">Dashboard</li>
 								</ul>
 							</div>
 						</div>
@@ -87,7 +84,7 @@
                         <div class="col-md-12 d-flex">
 						
 							<!-- Feed Activity -->
-							<div class="card  card-table flex-fill">
+							<!-- <div class="card  card-table flex-fill">
 								<div class="card-header">
 									<h4 class="card-title"></h4>
 								</div>
@@ -96,54 +93,48 @@
 										<table class="table table-hover table-center mb-0">
 											<thead>
 												<tr>													
-													<th>Test ID</th>
-                          <th>Test Name</th>
-													<th>Test Price</th>
-                          <th>Action</th>												
+													<th>Doctor Id</th>
+                          <th>Doctor Name</th>
+													<th>Phone</th>
+													<th>Email</th>
+                          <th>Status</th>													
 												</tr>
 											</thead>
 											<tbody>
-                       {% for t in test%}
+                     {% for doctor in doctor%}
 												<tr>
-                          <td>{{t.test_id}}</td>
-                          <td>{{t.test_name}}</td>
-                          <td>{{t.test_price}}</td>
-                          <td>
-														<div class="actions">
-															<a  data-toggle="modal" data-target="#delete_modal{{t.test_id}}" class="btn btn-sm bg-danger-light">
-																<i class="fe fe-trash"></i> Delete
-															</a>
-															
-														</div>
+                          <td>{{doctor.doctor_id}}</td>
+
+													<td>
+														<h2 class="table-avatar">
+															<a href="#" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="{{doctor.featured_image.url}}" alt="User Image"></a>
+															<a href="#">{{doctor.name}}</a>
+														</h2>
 													</td>
+                          
+													<td>{{doctor.phone_number}}</td>
+													<td>{{doctor.email}}</td>
+													
+                          <td>
+                            <div class="table-action">
+                              <a
+                                href="{% url 'create-report' pk=doctor.doctor_id %}"
+                                class="btn btn-outline-info btn-rounded" 
+                                >
+                                <i class="fas fa-file-alt"></i> Create Report 
+                              </a>
+                
+                              </div>
+                          </td>
 												</tr>
-                        <div class="modal fade" id="delete_modal{{t.test_id}}" aria-hidden="true" role="dialog">
-													<form method="POST" action="{% url 'delete-test' pk=t.test_id %}">
-													<div class="modal-dialog modal-dialog-centered" role="document" >
-														<div class="modal-content">
-															{% csrf_token %}
-																<div class="modal-body">
-																<div class="form-content p-2">
-																	<h4 class="modal-title" style="display:flex;justify-content: center;align-items: center;">Delete</h4>
-																	<p class="mb-4"  style="display:flex;justify-content: center;align-items: center;">Are you sure want to delete?</p>
-																	<div style="display:flex;justify-content: center">
-																		<button type="submit" class="btn btn-primary" style="margin-right: 5px;">Yes </button>
-																		<button type="button" class="btn btn-danger" style="margin-left: 5px;" data-dismiss="modal">Close</button>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-													</form>
-												</div>
-                   {% endfor %}
+                      {% endfor %}
 												
 												
 											</tbody>
 										</table>
 									</div>
 								</div>
-							</div>
+							</div> -->
 							<!-- /Feed Activity -->
 							
 						</div>
