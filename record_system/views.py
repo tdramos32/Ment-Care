@@ -8,18 +8,20 @@ from doctor.models import Doctor_Information, Appointment
 from doctor.models import  Prescription,Perscription_medicine,Perscription_test
 from hospital.models import Patient
 from datetime import datetime
-from record_system.models import appointment_notes, record, diagnoses_info
+from record_system.models import appointment_notes, record
+from django.views.generic import View
+
 # Create your views here.
 class ViewAppointmentPDF(View):
     def get(self, request, *args, **kwargs):
-        pdf = render_to_pdf('app/pdf_record_template', data)
+        pdf = render_to_pdf('app/appointment_notes_pdf', appointment_notes)
 class ViewPatientFullPDF(View):
     def get(self, request, *args, **kwargs):
-        pdf = render_to_pdf('app/pdf_record_template', data)
+        pdf = render_to_pdf('app/patient_full_pdf', record)
 class ViewPatientSummaryPDF(View):
     def get(self, request, *args, **kwargs):
-        pdf = render_to_pdf('app/pdf_record_template', data)
-        
+        pdf = render_to_pdf('app/patient_summary_pdf', record)
+
 def render_to_pdf(template_src, context_dict={}):
     template=get_template(template_src)
     html=template.render(context_dict)
