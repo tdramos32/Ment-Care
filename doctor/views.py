@@ -37,6 +37,7 @@ from xhtml2pdf import pisa
 from .models import Report
 from django.views.decorators.csrf import csrf_exempt
 from mood.models import Mood
+from django.urls import reverse
 
 # Create your views here.
 
@@ -122,9 +123,8 @@ def doctor_register(request):
 
 @csrf_exempt
 def doctor_login(request):
-    # page = 'patient_login'
     if request.method == 'GET':
-        return render(request, 'doctor-login.html')
+        return render(request, 'doctor-login.html')# page = 'patient_login'
     elif request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
@@ -139,14 +139,20 @@ def doctor_login(request):
         if user is not None:
             
             login(request, user)
-            if request.user.is_doctor:
+            if request.user.is_doctor :
                 # user.login_status = "online"
                 # user.save()
                 messages.success(request, 'Welcome Doctor!')
+
+            
                 return redirect('doctor-dashboard')
+            if request.user.is_labworker:
+                messages.success(request,'Welcome Staff')
+                return redirect (reverse('Health_Staff:staff-dashboard'))
+                
             else:
                 messages.error(request, 'Invalid credentials. Not a Doctor')
-                return redirect('doctor-logout')   
+                return redirect('doctor-logout')  
         else:
             messages.error(request, 'Invalid username or password')
             
