@@ -10,7 +10,6 @@ from hospital.models import Patient
 from datetime import datetime
 from record_system.models import appointment_notes, record
 from django.views.generic import View
-
 # Create your views here.
 class ViewAppointmentPDF(View):
     def get(self, request, *args, **kwargs):
@@ -21,7 +20,6 @@ class ViewPatientFullPDF(View):
 class ViewPatientSummaryPDF(View):
     def get(self, request, *args, **kwargs):
         pdf = render_to_pdf('app/patient_summary_pdf', record)
-
 def render_to_pdf(template_src, context_dict={}):
     template=get_template(template_src)
     html=template.render(context_dict)
