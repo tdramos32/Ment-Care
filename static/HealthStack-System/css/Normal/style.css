@@ -2963,7 +2963,7 @@ home-image{
 	width: 40px;
 }
 .clinic-services {
-    color: #272b41;
+    color: #6973ad;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -2993,7 +2993,7 @@ home-image{
 .clini-infos ul li {
     display: block;
     line-height: 30px;
-    color: #4E4852;
+    color: #9e92a7;
 }
 .clini-infos ul li i {
     font-size: 15px;
@@ -3077,7 +3077,7 @@ home-image{
 .user-tabs .nav-tabs > li > a {
 	border: 0;
 	border-bottom: 3px solid transparent;
-    color: #3e3e3e;
+    color: #bdbdbd;
     font-weight: 600;
     padding: 20px;
 }
@@ -5099,7 +5099,7 @@ home-image{
 	vertical-align: middle;
 }
 .dashboard-menu > ul > li > a {
-	color: #757575;
+	color: #bdbdbd;
 	display: block;
 	padding: 16px 20px;
 }
