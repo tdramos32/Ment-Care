@@ -57,19 +57,11 @@ def ViewAppoinmentNotes(request,pk):
     patient = appointment_info.patient
     doctor = appointment_info.doctor
     app = appointment_info.appointment
-    prescriptions = appointment_info.prescriptions
-    notes = appointment_info.notes
-    next_app = appointment_info.next_appointment
-    diagnoses = appointment_info.diagnoses
     context={
         'appointment_info':appointment_info,
         'patient':patient,
         'doctor':doctor,
         'app':app,
-        'prescriptions':prescriptions,
-        'notes':notes,
-        'next_app':next_app,
-        'diagnoses':diagnoses
     }
     pres_pdf=render_to_pdf('appointment_notes_pdf.html', context)
     if pres_pdf:
