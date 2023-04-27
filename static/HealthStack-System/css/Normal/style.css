@@ -1702,7 +1702,7 @@ button.bg-danger:hover {
     clear: both;
     white-space: nowrap;
     font-size: 14px;
-    color: #2d3b48;
+    color: #bdbdbd;
     -webkit-transition: all .35s ease;
     transition: all .35s ease;
 	width: 100%;
@@ -4162,7 +4162,7 @@ home-image{
 	align-items: center;
     background-color: #333333;
     border-bottom: 1px solid #f0f0f0;
-    color: #272b41;
+    color: #bdbdbd;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -4184,7 +4184,7 @@ home-image{
 	display: inline-flex;
 }
 .chat-cont-left .chat-search {
-    background-color: #f5f5f6;
+    background-color: #333333;
     border-bottom: 1px solid #e5e5e5;
     padding: 10px 15px;
     width: 100%;
@@ -4264,7 +4264,7 @@ home-image{
     white-space: nowrap;
 }
 .chat-cont-left .chat-users-list a.media .media-body > div:first-child .user-name {
-    color: #272b41;
+    color: #bdbdbd;
     text-transform: capitalize;
 }
 .chat-cont-left .chat-users-list a.media .media-body > div:first-child .user-last-chat {
@@ -4341,7 +4341,7 @@ home-image{
     width: 10px;
 }
 .chat-cont-right .chat-header .media .media-body .user-name {
-    color: #272b41;
+    color: #bdbdbd;
     font-size: 16px;
     font-weight: 500;
     text-transform: capitalize;
@@ -4372,7 +4372,7 @@ home-image{
     width: 30px;
 }
 .chat-cont-right .chat-body {
-    background-color: #f5f5f6;
+    background-color: #1b1b1b;
 }
 .chat-cont-right .chat-body ul.list-unstyled {
     margin: 0 auto;
@@ -4395,7 +4395,7 @@ home-image{
 	position: relative;
 }
 .chat-cont-right .chat-body .media .media-body .msg-box > div p {
-    color: #272b41;
+    color: #fff;
     margin-bottom: 0;
 }
 .chat-cont-right .chat-body .media .media-body .msg-box + .msg-box {
@@ -4428,10 +4428,10 @@ home-image{
     margin-left: 0;
 }
 .chat-cont-right .chat-body .media.sent .media-body .msg-box > div {
-    background-color: #e3e3e3;
+    background-color: #3f8bc8;
 }
 .chat-cont-right .chat-body .media.sent .media-body .msg-box > div p {
-    color: #272b41;
+    color: #fff;
 }
 .chat-cont-right .chat-body .chat-date {
     font-size: 14px;
@@ -4587,10 +4587,10 @@ home-image{
     background: #aaa;
 }
 .chat-cont-right .chat-body .media.received .media-body .msg-box > div .chat-time {
-    color: rgba(50, 65, 72, 0.4);
+    color: rgba(189,189,189, 1);
 }
 .chat-cont-right .chat-body .media.sent .media-body .msg-box > div .chat-time {
-    color: rgba(50, 65, 72, 0.4);
+    color: rgba(189,189,189, 1);
 }
 .chat-msg-info li a {
 	color: #777;
