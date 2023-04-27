@@ -5,21 +5,12 @@ from django.template.loader import get_template
 from django.http import HttpResponse
 from xhtml2pdf import pisa
 from doctor.models import Doctor_Information, Appointment
-from doctor.models import  Prescription,Perscription_medicine,Perscription_test
+from doctor.models import  Prescription,Prescription_medicine,Prescription_test
 from hospital.models import Patient
 from datetime import datetime
 from record_system.models import appointment_notes, record
 from django.views.generic import View
 # Create your views here.
-class ViewAppointmentPDF(View):
-    def get(self, request, *args, **kwargs):
-        pdf = render_to_pdf('app/appointment_notes_pdf', appointment_notes)
-class ViewPatientFullPDF(View):
-    def get(self, request, *args, **kwargs):
-        pdf = render_to_pdf('app/patient_full_pdf', record)
-class ViewPatientSummaryPDF(View):
-    def get(self, request, *args, **kwargs):
-        pdf = render_to_pdf('app/patient_summary_pdf', record)
 def render_to_pdf(template_src, context_dict={}):
     template=get_template(template_src)
     html=template.render(context_dict)
@@ -28,6 +19,65 @@ def render_to_pdf(template_src, context_dict={}):
     if not pdf.err:
         return HttpResponse(result.getvalue(),content_type="aplication/pdf")
     return None
+
+def ViewPatientRecord(request,pk):
+    record_info = record.objects.get(record_id=pk)
+    patient = record_info.patient
+    doctor = record_info.doctor
+    context={
+        'record_info':record_info,
+        'patient':patient,
+        'doctor':doctor
+    }
+    pres_pdf=render_to_pdf('patient_full_pdf.html', context)
+    if pres_pdf:
+        response=HttpResponse(pres_pdf, content_type='application/pres_pdf')
+        content="inline; filename=prescription.pdf"
+        response['Content-Disposition']= content
+        return response
+    return HttpResponse("Not Found")
+def ViewRecordSummary(request,pk):
+    record_info = record.objects.get(record_id=pk)
+    patient = record_info.patient
+    doctor = record_info.doctor
+    context={
+        'record_info':record_info,
+        'patient':patient,
+        'doctor':doctor
+    }
+    pres_pdf=render_to_pdf('patient_summary_pdf.html', context)
+    if pres_pdf:
+        response=HttpResponse(pres_pdf, content_type='application/pres_pdf')
+        content="inline; filename=prescription.pdf"
+        response['Content-Disposition']= content
+        return response
+    return HttpResponse("Not Found")
+def ViewAppoinmentNotes(request,pk):
+    appointment_info = appointment_notes.objects.get(appointment_notes_id=pk)
+    patient = appointment_info.patient
+    doctor = appointment_info.doctor
+    app = appointment_info.appointment
+    prescriptions = appointment_info.prescriptions
+    notes = appointment_info.notes
+    next_app = appointment_info.next_appointment
+    diagnoses = appointment_info.diagnoses
+    context={
+        'appointment_info':appointment_info,
+        'patient':patient,
+        'doctor':doctor,
+        'app':app,
+        'prescriptions':prescriptions,
+        'notes':notes,
+        'next_app':next_app,
+        'diagnoses':diagnoses
+    }
+    pres_pdf=render_to_pdf('appointment_notes_pdf.html', context)
+    if pres_pdf:
+        response=HttpResponse(pres_pdf, content_type='application/pres_pdf')
+        content="inline; filename=prescription.pdf"
+        response['Content-Disposition']= content
+        return response
+    return HttpResponse("Not Found")
 """
 def prescription_pdf(request,pk):
     if request.user.is_patient:
