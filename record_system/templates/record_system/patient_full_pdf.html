@@ -69,6 +69,7 @@
                         <strong>Report ID:</strong>{{record_info.record_id}}
                         <br />
                         <strong>Patient ID:</strong> {{patient.user}} <br />
+                        <strong>Doctor ID:</strong> {{doctor.doctor_id}} <br />
                       </p>
                     </div>
                   </div>
@@ -81,86 +82,26 @@
                       <div class="invoice-info">
                         <h1>
                           <strong class="customer-text"
-                            >Doctor Information:</strong
+                            >Patient Information:</strong
                           >
                         </h1>
                         <p class="invoice-details invoice-details-two">
-                          <b>Name: </b>{{doctor.name}} <br />
+                          <b>Name: </b>{{patient.name}} <br />
 
-                          <b>Email: </b>{{report.doctor.email}} <br />
-
-                          <b>Department: </b
-                          >{{report.doctor.department_name}}<br />
+                          <b>Email: </b>{{patient.email}} <br />
+                          <b>Phone Number: </b>{{patient.phone_number}} <br />
+                          <b>Address: </b>{{patient.address}} <br />
+                          <b>Date of Birth: </b>{{patient.dob}} <br />
+                          <b>Prescriptions: </b>{{patient.prescriptions}} <br />
+                          <b>Patient History: </b>{{patient.history}} <br />
 
                           <!-- <b>Doctor Ph: </b>{{report.doctor.phone_number}}<br> -->
                         </p>
                       </div>
                     </div>
-                    <div class="col-md-6">
-                      <div class="invoice-info invoice-info2">
-                        <h1>
-                          <strong class="customer-text"
-                            >Patient Information:</strong
-                          >
-                        </h1>
-                        <p class="invoice-details">
-                          <b>Name: </b>{{report.patient.name}}<br />
-                          <b>Age: </b>{{report.patient.age}}<br />
-                          <b>Blood Group: </b
-                          >{{report.patient.blood_group}}<br />
-                          <b>Email: </b>{{report.patient.email}} <br />
-                          <b>Phone: </b>{{report.patient.phone_number}}<br />
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="invoice-item invoice-table-wrap">
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="table-responsive">
-                        <table
-                          class="invoice-table table table-bordered"
-                          style="text-align: center; border: 1px solid black"
-                        >
-                          <tr style="vertical-align: center; height: 50px">
-                            <th>Specimen Information</th>
-                            <th>Specimen ID</th>
-                            <th>Collection Date/Time</th>
-                            <th>Receiving Date/Time</th>
-                          </tr>
-                          {% for s in specimen %}
-                          <tr style="vertical-align: center; height: 30px">
-                            <td>{{s.specimen_type}}</td>
-                            <td>{{s.specimen_id}}</td>
-                            <td>{{s.collection_date}}</td>
-                            <td>{{s.receiving_date}}</td>
-                          </tr>
-                          {% endfor %}
-                        </table>
-                      </div>
-                    </div>
                   </div>
                 </div>
 
-                <div class="invoice-item invoice-table-wrap">
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="table-responsive">
-                        <h2
-                          class="text-center"
-                          style="
-                            margin-bottom: 4px;
-                            color: rgb(84, 147, 199);
-                            text-align: center;
-                          "
-                        >
-                          <b>Test</b>
-                        </h2>
-                      </div>
-                    </div>
-                  </div>
-                </div>
                 <div class="other-info">
                   <h2
                     class="text-center"
@@ -170,9 +111,13 @@
                       text-align: center;
                     "
                   >
-                    <b>Other Information</b>
+                    <b>Sensitive Information</b>
                   </h2>
-                  <p>{{report.other_information}}</p>
+                  <b>Patient is Violent: </b>{{patient.is_violent}} <br />
+                  <b>Patient is on Suicide Watch: </b
+                  >{{patient.is_on_suicide_watch}} <br />
+                  <b>Patient has been Sectioned: </b
+                  >{{patient.has_been_sectioned}} <br />
                 </div>
                 <!-- /Invoice Item -->
               </div>
