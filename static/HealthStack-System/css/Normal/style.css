@@ -344,17 +344,17 @@ a.bg-primary:focus,
 a.bg-primary:hover, 
 button.bg-primary:focus, 
 button.bg-primary:hover {
-    background-color: #09dca4 !important;
+    background-color: #008535 !important;
 }
 .bg-success,
 .badge-success {
-	background-color: #00e65b !important;
+	background-color: #008535 !important;
 }
 a.bg-success:focus, 
 a.bg-success:hover, 
 button.bg-success:focus, 
 button.bg-success:hover {
-    background-color: #00cc52 !important;
+    background-color: #008535 !important;
 }
 .bg-info,
 .badge-info {
@@ -4056,7 +4056,7 @@ home-image{
     position: relative;
     font-size: .875rem;
     font-weight: 500;
-    color: #272b41;
+    color: #bdbdbd;
     text-transform: capitalize;
 }
 .patient-info ul li + li {
