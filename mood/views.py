@@ -23,7 +23,7 @@ def mood(request):
 
         moodinfo = Mood(user = user, input = data, label = label)
         moodinfo.save()
-
+        
         return redirect(reverse('patient-dashboard'))
     
     return render(request,'mood/mood.html',{'items':'none'})

@@ -86,15 +86,15 @@ html {
     height: 100%;
 }
 body {
-	background-color: #e6f2ff;
-	color: #272b41;
+	background-color: #333333;
+	color: #bdbdbd;
     font-family: "Poppins",sans-serif;
 	font-size: 0.9375rem;
     height: 100%;
 	overflow-x: hidden;
 }
 h1, h2, h3, h4, h5, h6 {
-	color: #272b41;
+	color: #bdbdbd;
 	font-weight: 500;
 }
 .h1, h1 {
@@ -117,7 +117,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-    color: #2E3842;
+    color: #bdbdbd;
 }
 a:hover {
 	color: #09dca4;
@@ -156,7 +156,7 @@ input[type=password] {
 }
 .form-control {
     border-color: #dcdcdc;
-    color: #333;
+    color: #bdbdbd;
 	font-size: 15px;
     min-height: 46px;
 	padding: 6px 15px;
@@ -170,23 +170,23 @@ input[type=password] {
 	padding-right: 30px;
 }
 .form-control::-webkit-input-placeholder {
-	color: #858585;
+	color: #bdbdbd;
 	font-size: 14px;
 }
 .form-control::-moz-placeholder {
-	color: #858585;
+	color: #bdbdbd;
 	font-size: 14px;
 }
 .form-control:-ms-input-placeholder {
-	color: #858585;
+	color: #bdbdbd;
 	font-size: 14px;
 }
 .form-control::-ms-input-placeholder {
-	color: #858585;
+	color: #bdbdbd;
 	font-size: 14px;
 }
 .form-control::placeholder {
-	color: #858585;
+	color: #bdbdbd;
 	font-size: 14px;
 }
 .list-group-item {
@@ -202,7 +202,7 @@ input[type=password] {
 -----------------------*/
 
 .table {
-	color: #272b41;
+	color: #bdbdbd;
 	max-width: 100%;
 	margin-bottom: 0;
 	width: 100%;
@@ -249,7 +249,7 @@ table.table td h2.table-avatar {
 	white-space: nowrap;
 }
 table.table td h2 a {
-	color: #272b41;
+	color: #bdbdbd;
 }
 table.table td h2 a:hover {
 	color: #09dca4;
@@ -329,9 +329,9 @@ table.table td h2 span {
     box-shadow: unset;
 }
 .btn-white {
-	background-color: #fff;
+	background-color: #333333;
 	border: 1px solid #ccc;
-	color: #272b41;
+	color: #bdbdbd;
 }
 .btn.btn-rounded {
 	border-radius: 50px;
@@ -387,7 +387,7 @@ button.bg-danger:hover {
     background-color: #e63333 !important;
 }
 .bg-white {
-	background-color: #fff;
+	background-color: #333333;
 }
 .bg-purple,
 .badge-purple {
@@ -808,7 +808,7 @@ button.bg-danger:hover {
 	border-color: #20c0f3;
 }
 .dropdown-menu {
-    background-color: #fff;
+    background-color: #333333;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 3px;
     box-shadow: inherit;
@@ -821,7 +821,7 @@ button.bg-danger:hover {
 .navbar-nav .open .dropdown-menu {
 	border: 0;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	background-color: #fff;
+	background-color: #333333;
 }
 .card {
     border: 1px solid #f0f0f0;
@@ -838,12 +838,12 @@ button.bg-danger:hover {
 	padding: 1rem 1.5rem;
 }
 .card-footer {
-	background-color: #fff;
+	background-color: #333333;
 	border-top: 1px solid #f0f0f0;
 	padding: 1rem 1.5rem;
 }
 .card .card-header {
-    background-color: #fff;
+    background-color: #333333;
     border-bottom: 1px solid #f0f0f0;
 }
 .card .card-header .card-title {
@@ -1669,7 +1669,7 @@ button.bg-danger:hover {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-	background-color: #fff;
+	background-color: #333333;
 	border: 0;
 	border-bottom: 1px solid #f0f0f0;
 	display: -webkit-box;
@@ -1737,7 +1737,7 @@ button.bg-danger:hover {
 	display: inline-block;
 }
 .header-contact-img i {
-	color: rgba(0, 0, 0, 0.5);
+	color: rgba(110, 110, 110, 0.5);
 	font-size: 30px;
 }
 .header-contact-detail {
@@ -1745,14 +1745,14 @@ button.bg-danger:hover {
 	padding-left: 10px;
 }
 .header-contact-detail p.contact-header {
-	color: #484848;
+	color: #bdbdbd;
 	font-size: 13px;
 	font-weight: 400;
 	margin-bottom: 2px;
 	text-align: left;
 }
 .header-contact-detail p.contact-info-header {
-	color: #000;
+	color: #bdbdbd;
 	font-weight: 500;
 	font-size: 14px;
 	margin-bottom: 0;
@@ -1817,7 +1817,7 @@ button.bg-danger:hover {
     color: #09dca4;
 	letter-spacing: 0.5px;
 	padding-left: 20px;
-	background-color: #fff;
+	background-color: #333333;
 }
 .header-navbar-rht li a.header-login {
     border: 2px solid #09e5ab;
@@ -1958,7 +1958,7 @@ button.bg-danger:hover {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-	background-color: #fff;
+	background-color: #333333;
     height: 60px;
     padding:  0 20px;
 	justify-content: space-between;
@@ -2005,7 +2005,7 @@ html.menu-opened body {
 -----------------------*/
 
 .footer {
-    background-color: #15558d;
+    background-color: #0f3f69;
 }
 .footer .footer-top {
 	padding: 40px 0;
@@ -2151,13 +2151,13 @@ html.menu-opened body {
 -----------------------*/
 
 .account-page {
-	background-color: #fff;
+	background-color: #333333;
 }
 .account-page .content {
     padding: 50px 0;
 }
 .login-right {
-	background-color: #fff;
+	background-color: #333333;
 	border: 1px solid #f0f0f0;
 	border-radius: 4px;
 	padding: 25px;
@@ -2206,7 +2206,7 @@ html.menu-opened body {
 	display: block;
 }
 .span-or {
-	background-color: #fff;
+	background-color: #333333;
 	display: block;
 	left: 50%;
 	margin-left: -20px;
@@ -2339,7 +2339,7 @@ home-image{
     font-size: 13px;
 }
 .section-specialities {
-	background-color: #fff;
+	background-color: #333333;
 	padding: 80px 0;
 }
 .slick-dots {
@@ -2447,7 +2447,7 @@ home-image{
     box-shadow: 1px 6px 14px rgba(0,0,0,0.2);
     border-radius: 50%;
     padding: 5px;
-    background-color: #fff;
+    background-color: #333333;
 	display: -webkit-inline-box;
 	display: -ms-inline-flexbox;
 	display: inline-flex;
@@ -2465,7 +2465,7 @@ home-image{
     margin: 30px 0 0;
 }
 .section-doctor {
-	background-color: #f8f9fa;
+	background-color: #333333;
 	padding: 80px 0;
 }
 .section-doctor .section-header {
@@ -2481,7 +2481,7 @@ home-image{
 	width: 280px;
 }
 .profile-widget {
-    background-color: #fff;
+    background-color: #333333;
     border: 1px solid #f0f0f0;
     border-radius:4px;
     margin-bottom:30px;
@@ -2516,7 +2516,7 @@ home-image{
     position: absolute;
     top: 5px;
     right: 5px;
-    background-color: #fff;
+    background-color: #333333;
     width: 30px;
     height: 30px;
 	display: -webkit-inline-box;
@@ -2667,7 +2667,7 @@ home-image{
 	color: #fff;
 }
 .section-features {
-	background-color: #fff;
+	background-color: #333333;
 	padding: 80px 0;
 }
 .feature-item img {
@@ -2773,7 +2773,7 @@ home-image{
 	cursor: pointer
 }
 .custom_check input:checked ~ .checkmark {
-	background-color: #fff;
+	background-color: #333333;
 }
 .custom_check .checkmark {
 	position: absolute;
@@ -2782,7 +2782,7 @@ home-image{
 	height: 20px;
 	width: 20px;
 	border: 1px solid #dcdcdc;
-	background-color: #fff;
+	background-color: #333333;
 	border-radius: 3px;
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -2834,7 +2834,7 @@ home-image{
 	left: 0;
 	height: 20px;
 	width: 20px;
-	background-color: #fff;
+	background-color: #333333;
 	border: 1px solid #ccc;
 	border-radius: 50%
 }
@@ -3003,7 +3003,7 @@ home-image{
 	margin-top: 15px;
 }
 .clinic-booking a {
-    background-color: #fff;
+    background-color: #333333;
     border: 2px solid #20c0f3;
     border-radius: 4px;
     color: #20c0f3;
@@ -3142,7 +3142,7 @@ home-image{
 	width: 10px;
 }
 .experience-list > li .experience-content {
-	background-color: #fff;
+	background-color: #333333;
 	margin: 0 0 20px 40px;
 	padding: 0;
 	position: relative;
@@ -3527,7 +3527,7 @@ home-image{
 	position: relative;
 }
 .time-slot li .timing:hover {
-    background-color: #fff;
+    background-color: #333333;
 }
 .time-slot li .timing:last-child {
 	margin-bottom: 0;
@@ -3571,7 +3571,7 @@ home-image{
     margin-bottom: 30px;
 }
 .card-label > label {
-    background-color: #fff;
+    background-color: #333333;
     color: #959595;
     display: inline-block;
     font-size: 13px;
@@ -3580,7 +3580,7 @@ home-image{
     padding: 0 7px;
 }
 .card-label > input {
-    background-color: #fff;
+    background-color: #333333;
     border: 1px solid #dbdbdb;
     border-radius: 4px;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .05);
@@ -3789,7 +3789,7 @@ home-image{
 -----------------------*/
 
 .invoice-content {
-    background-color: #fff;
+    background-color: #333333;
 	border: 1px solid #f0f0f0;
     border-radius: 4px;
     margin-bottom: 30px;
@@ -4010,7 +4010,7 @@ home-image{
 	margin-bottom: 30px;
 }
 .appointment-tab .nav-tabs {
-    background-color: #fff;
+    background-color: #333333;
     padding: 1.5rem;
     border: 1px solid #f0f0f0;
     border-radius: .25rem 0.25rem 0 0 !important;
@@ -4160,7 +4160,7 @@ home-image{
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-    background-color: #fff;
+    background-color: #333333;
     border-bottom: 1px solid #f0f0f0;
     color: #272b41;
 	display: -webkit-box;
@@ -4193,7 +4193,7 @@ home-image{
     width: 100%;
 }
 .chat-cont-left .chat-search .input-group .form-control {
-    background-color: #fff;
+    background-color: #333333;
     border-radius: 50px;
     padding-left: 36px;
 }
@@ -4222,7 +4222,7 @@ home-image{
     overflow-y: auto;
 }
 .chat-cont-left .chat-users-list {
-    background-color: #fff;
+    background-color: #333333;
 }
 .chat-cont-left .chat-users-list a.media {
     border-bottom: 1px solid #f0f0f0;
@@ -4297,7 +4297,7 @@ home-image{
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-    background-color: #fff;
+    background-color: #333333;
     border-bottom: 1px solid #f0f0f0;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -4408,7 +4408,7 @@ home-image{
 	margin-bottom: 0;
 }
 .chat-cont-right .chat-body .media.received .media-body .msg-box > div {
-	background-color: #fff;
+	background-color: #333333;
 }
 .chat-cont-right .chat-body .media.sent {
     margin-bottom: 20px;
@@ -4462,7 +4462,7 @@ home-image{
     width: 100%;
 }
 .chat-cont-right .chat-footer {
-    background-color: #fff;
+    background-color: #333333;
     border-top: 1px solid #f0f0f0;
     padding: 10px 15px;
     position: relative;
@@ -4908,7 +4908,7 @@ home-image{
 }
 .calendar-events:hover {
 	border-color: #e9e9e9;
-    background-color: #fff;
+    background-color: #333333;
 }
 .calendar-events i {
     margin-right: 8px;
@@ -5026,7 +5026,7 @@ home-image{
 -----------------------*/
 
 .profile-sidebar {
-    background-color: #fff;
+    background-color: #333333;
 	border: 1px solid #f0f0f0;
     border-radius: 4px;
 	margin-bottom:30px;
@@ -5201,7 +5201,7 @@ home-image{
 -----------------------*/
 
 .widget-profile {
-    background-color: #fff;
+    background-color: #333333;
     border-bottom: 1px solid #f0f0f0;
 }
 .widget-profile .profile-info-widget {
@@ -5235,7 +5235,7 @@ home-image{
     width: 120px;
 }
 .appointments .appointment-list {
-	background-color: #fff;
+	background-color: #333333;
     border: 1px solid #f0f0f0;
     border-radius: 4px;
 	display: -webkit-box;
@@ -5293,7 +5293,7 @@ home-image{
 	margin: 0;
 }
 .review-listing.doc-review > ul > li {
-	background-color: #fff;
+	background-color: #333333;
 	border: 1px solid #f0f0f0;
 	padding: 20px;
 }
@@ -5339,11 +5339,11 @@ home-image{
 	height: 100%;
 	table-layout: fixed;
 	width: 100%;
-	background-color: #fff;
+	background-color: #333333;
 	border: 1px solid #f0f0f0;
 }
 .fixed-header {
-	background-color: #fff;
+	background-color: #333333;
 	border-bottom: 1px solid #f0f0f0;
 	padding: 10px 15px;
 }
@@ -5419,7 +5419,7 @@ home-image{
 	border-radius: 100%;
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	padding: 3px;
-	background-color: #fff;
+	background-color: #333333;
 }
 .call-duration {
 	display: inline-block;
@@ -5436,7 +5436,7 @@ home-image{
 	font-weight: 500;
 }
 .call-footer {
-	background-color: #fff;
+	background-color: #333333;
 	border-top: 1px solid #f0f0f0;
 	padding: 15px;
 }
@@ -5551,7 +5551,7 @@ home-image{
 .call-users ul li img {
 	border-radius: 6px;
 	padding: 2px;
-	background-color: #fff;
+	background-color: #333333;
 	border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .call-mute {
@@ -5816,7 +5816,7 @@ home-image{
 		margin-left: 3px;
 	}
 	.main-nav li > ul {
-		background-color: #fff;
+		background-color: #333333;
 		border-radius: 5px;
 		box-shadow: 0 0 3px  rgba(0, 0, 0, 0.1);
 		display: block;
@@ -6355,7 +6355,7 @@ home-image{
 	.nav-tabs {
 		border-bottom: 0;
 		position: relative;
-		background-color: #fff;
+		background-color: #333333;
 		padding: 5px 0;
 		border: 1px solid #ddd;
 		border-radius: 3px;
@@ -6717,7 +6717,7 @@ home-image{
 		max-width: 160px;
 	}
 	.section-features, .section-features, .section-specialities {
-		background-color: #fff;
+		background-color: #333333;
 		padding: 30px 0;
 	} 
 	.login-header h3 a {
