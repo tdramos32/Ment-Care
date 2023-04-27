@@ -2179,7 +2179,7 @@ html.menu-opened body {
     margin-top: 2px;
 }
 .login-right .dont-have {
-    color: #3d3d3d;
+    color: #bdbdbd;
     margin-top: 20px;
     font-size: 13px;
 }
@@ -2216,7 +2216,7 @@ html.menu-opened body {
 	width: 42px;
 }
 .forgot-link {
-    color: #3d3d3d;
+    color: #bdbdbd;
     display: inline-block;
     font-size: 13px;
     margin-bottom: 10px;
