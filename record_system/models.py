@@ -14,7 +14,7 @@ class record(models.Model):
     def __str__(self) -> str:
         return(self.patient_name + "'s Mental Health Report") 
 
-#test
+#tes
 class appointment_notes(models.Model):
     appointment_notes_id = models.AutoField(primary_key=True)
     appointment = models.ForeignKey(Appointment, on_delete=models.CASCADE, null=True, blank=True)
