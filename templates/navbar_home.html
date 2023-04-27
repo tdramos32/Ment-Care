@@ -43,7 +43,7 @@
          
           <li>
             <a href="{% url 'doctor-dashboard' %}" style="text-decoration: none;"
-              >Doctor Dashboard</a
+              >Dashboard</a
             >
           </li>
 
@@ -65,7 +65,7 @@
           <li><a href="{% url 'search' %}">Search Doctor</a></li>
           <li>
             <a href="{% url 'patient-dashboard' %}"
-              >Patient Dashboard</a
+              >Dashboard</a
             >
           </li>
           <li>
@@ -83,11 +83,11 @@
       {% endcomment %}
 
       {% if user.is_authenticated and user.is_patient %}
-      <li><a href="{% url 'patient-dashboard' %}"style="text-decoration: none;">Patient Dashboard</a></li>
+      <li><a href="{% url 'patient-dashboard' %}"style="text-decoration: none;">Dashboard</a></li>
       {% endif %}
 
       {% if user.is_authenticated and user.is_doctor %}
-      <li><a href="{% url 'doctor-dashboard' %}"style="text-decoration: none;">Doctor Dashboard</a></li>
+      <li><a href="{% url 'doctor-dashboard' %}"style="text-decoration: none;">Dashboard</a></li>
       {% endif %}
 
       <li>
