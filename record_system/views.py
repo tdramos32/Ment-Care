@@ -44,7 +44,6 @@ def prescription_pdf(request,pk):
             # response['Content-Disposition']= content
             return response
         return HttpResponse("Not Found")
-
 def full_report(request,pk):
     if request.user.is_patient:
         patient = Patient.objects.get(user=request.user)
