@@ -86,7 +86,7 @@ def patient_id(request):
 @cache_control(no_cache=True, must_revalidate=True, no_store=True)
 def logoutDoctor(request):
     user = User.objects.get(id=request.user.id)
-    if user.is_doctor:
+    if user.is_doctor or user.is_labworker:
         user.login_status == "offline"
         user.save()
         logout(request)
