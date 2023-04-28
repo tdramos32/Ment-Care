@@ -21,6 +21,21 @@
                 </li>
 
             </ul>
+
+            <li class="nav-item has-submenu">
+          
+                <a href="#" class="nav-link"><i class="fas fa-search"></i><span>Patient ID</span></a>
+                  <ul class="submenu collapse" style="padding:19px">
+                    <form action="{% url 'Health_Staff:patient-search' %}"   method="GET"> 
+                        <input type="text" class="form-control" placeholder="search" name="search_query" value="{{search_query}}">
+                    </form>
+                </ul>
+              
+            </li>
+
+
+
+            
         </div>
     </div>
 </div>
