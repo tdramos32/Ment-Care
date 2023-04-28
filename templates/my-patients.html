@@ -81,13 +81,22 @@
 														<img src="{{appointment.patient.featured_image.url}}" alt="User Image">
 													</a>
 													<div class="profile-det-info">
+														
+														
 														<form action="" method="post">
 															{% csrf_token %}
 															<div>
 																<input type="hidden" name = "tweet" required>
 															</div>
+												
+													   
 															<h3><a href="{% url 'patient-profile' pk=appointment.patient.patient_id %}">{{appointment.patient.name}}</a></h3>
 														</form>
+														
+														
+														
+
+													
 														<div class="patient-details">
 															<h5><b>ID :</b>{{appointment.patient.patient_id}}</h5>
 															<h5 class="mb-0"><i class="fas fa-map-marker-alt"></i>{{appointment.patient.address}}</h5>

@@ -469,7 +469,6 @@ def my_patients(request):
     else:
         redirect('doctor-logout')
     
-    
     context = {'doctor': doctor, 'appointments': appointments}
     return render(request, 'my-patients.html', context)
 
