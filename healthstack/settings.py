@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'pharmacy.apps.PharmacyConfig',
     'sslcommerz.apps.SslcommerzConfig',
     'mood.apps.MoodConfig',
+    'twitter.apps.TwitterConfig',
     'widget_tweaks',
     'rest_framework',
     'ChatApp.apps.ChatappConfig',

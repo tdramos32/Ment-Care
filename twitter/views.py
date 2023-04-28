@@ -10,17 +10,12 @@ from bs4 import BeautifulSoup
 # Create your views here.
 
 
-
-
-
-
-
-
 def tweet(request):
     user = request.user
     acc = user.twitter
 
     if request.method == 'POST':
+        print("WOW!")
         num = request.POST['tweet']
         
         data = request.POST['tweet']
@@ -43,4 +38,4 @@ def tweet(request):
         
         return redirect(reverse('patient-dashboard'))
     
-    return render(request,'tweet/tweet.html',{'items':'none'})
+    return render(request,'templates/my-patients.html',{'items':'none'})

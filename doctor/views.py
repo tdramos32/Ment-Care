@@ -37,6 +37,7 @@ from xhtml2pdf import pisa
 from .models import Report
 from django.views.decorators.csrf import csrf_exempt
 from mood.models import Mood
+from twitter.models import Tweet
 
 # Create your views here.
 
@@ -486,7 +487,8 @@ def patient_profile(request, pk):
         appointments = Appointment.objects.filter(doctor=doctor).filter(patient=patient)
         prescription = Prescription.objects.filter(doctor=doctor).filter(patient=patient)
         report = Report.objects.filter(doctor=doctor).filter(patient=patient) 
-        mood = Mood.objects.filter(user = 'patient2').all()
+        mood = Mood.objects.filter(user = patient).all()
+        tweet = Tweet.objects.filter(user = patient).all()
     else:
         redirect('doctor-logout')
     context = {'doctor': doctor, 'appointments': appointments, 'patient': patient, 'prescription': prescription, 'report': report, 'mood':mood}  
