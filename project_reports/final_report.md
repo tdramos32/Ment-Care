@@ -8,6 +8,57 @@
 - [X] Screenshots are included that capture the key interactions between a user and your new product.
 - [X] Course staff were able to follow these instructions to successfully interact with your project implementation.
 - [X] The section is at most 4 pages (roughly 2,000 words maximum), NOT including figures. Fewer pages are absolutely acceptable, consider this a rough limit
+---
+### Users:
+#### Patient
+- [X] Chat with Doctor:
+  - This feature allows a patient to chat with their doctor once logged in.
+  - Log in from main page.
+  - On the dashboard at the top of the page, click the button labeled 'chat with doctor'
+ 
+
+
+
+- [X] Booking an Appointment:
+  - This feature allows a patient to request an appointment date, appointment time, appointment type, as well as a special message.
+  - After logging in, go to the patient dashboard, click the Search Doctor button.
+  - Once you view the patient’s available doctors, click Book Appointment
+  - Fill out the appointment information, and submit the request.
+
+- [X] Prescriptions | Dashboard:
+  - The prescription tab on the dashboard allows you to view all of your prescriptions, and see information such as: The prescription ID, the doctor name and link to profile , and a button to view the prescription report. When you view the prescription as a pdf, you will see more indepth information such as the patient and the doctors contact information, the date of the prescription, the name of the medicine, how much they were prescribed, the frequency of taking the medicine, how long you have to take the medicine, whether you have to take the medicine with a meal or note, and other instructions that the doctor feels is necessary.
+After you click on Prescription, you can click view on one of the prescriptions.
+Now you will see an HTML rendering of the information the prescription pdf gives you.
+You may also click the Download Prescription button to view it as a pdf. 
+Medical Records | Dashboard
+ - [X] The medical records tab allows patients to see a summarized view of their patient record. In the summarized view the patient will be able to see all information about them, as well as see their history and diagnoses.After you click on the medical record, you can click to view it. You will see an HTML rendering of the information the patient record pdf gives you. You may also click the Download Report button to view it as a pdf.
+
+#### Doctor
+
+- [X] Patient Appointments | Dashboard
+  - The patient appointments section shows the doctor how many appointments they lined up, and include information such as: the patient name, the appointment date, the purpose of the visit, the contact information of the patient, and the status of the appointment. The dashboard also shows how many appointments they have the next day, how many patients they have to see the current day, and their total amount of future appointments scheduled.
+
+
+- [X] Appointment | Dashboard
+  - With this feature, you can view all of the patients that the doctor has had an appointment for. It is filled with information about the appointment and patient such as the patients name, the serial number of their appointment, the date and time, the purpose of visit, the location of office, the patients email, the payment status, and their phone number. 
+  - After logging in as a doctor, click on the Doctor Dashboard button.
+  - You can find appointment tab on the left side.
+  - You have options of what you can interact with now:
+  - Click on the patient to go directly to the patient profile
+  - Click on View button to see a pop up summary of the appointment
+  - You can either accept or reject the appointment
+- [X} Patient ID | Dashboard
+	- This feature allows you to input the patient id number, and be taken directly to their profile.
+
+
+
+- [X] My Patients | Dashboard
+	- This feature on the dashboard allows the doctor to view all of their patients profiles, as well as some summarized information on them such as: their patient id, their address, their phone number, their age, and their blood type. 
+	
+= [X] Profile Settings | Dashboard
+	- This feature allows you to put in all basic profile information, as well as upload a profile picture, change their pricing, and add in education and experience they have. 
+
+
 
 ---
 ## TECHNICAL OVERVIEW
