@@ -62,6 +62,8 @@ better. However, that is also an unfair assessment. Their system meant to serve 
 - [X] It provides a summary of what was planned to happen in each sprint vs what actually happened, with a discussion of what was revised as a result.
 - [X] The document is at most 2 pages (fewer pages are absolutely acceptable, consider this a rough limit)
 
+#### Agile Methodology
+###### We used the agile methodology to the best of what we could.
 
 
 
