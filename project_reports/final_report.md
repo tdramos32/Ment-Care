@@ -56,6 +56,31 @@ Medical Records | Dashboard
 	- This feature on the dashboard allows the doctor to view all of their patients profiles, as well as some summarized information on them such as: their patient id, their address, their phone number, their age, and their blood type. 
 
 
+#### Admin
+- [X] Dashboard
+	- Can view information such as total doctors, total patients, total hospitals, and total lab workers.
+
+- [X] Hospitals | Dashboard
+	Can add and edit information for the hospital, as well as emergency information.
+
+- [X] Doctors | Dashboard
+	- Can view a list of doctors registered, as well as a list of doctors pending approval of their registration.
+
+
+#### Clinical Staff
+- [X] Dashboard
+	- Can view a list of patients, the list of tests, a list of tasks, a search bar for patients through their id, and patient records.
+
+- [X] Patient List | Dashboard
+	- Can view reports of patients and their basic information.
+
+- [X] Patient ID | Dashboard
+	- Can search patients by their ID.
+
+- [X] Records | Dashboard
+	- Can view patient records
+
+
 
 ---
 ## TECHNICAL OVERVIEW
