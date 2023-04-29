@@ -15,6 +15,7 @@
   - This feature allows a patient to chat with their doctor once logged in.
   - Log in from main page.
   - On the dashboard at the top of the page, click the button labeled 'chat with doctor'
+  ![chat-doctor](part3_images/1-chat-with-doctor.png)
  
 
 
@@ -24,19 +25,24 @@
   - After logging in, go to the patient dashboard, click the Search Doctor button.
   - Once you view the patient’s available doctors, click Book Appointment
   - Fill out the appointment information, and submit the request.
+  ![chat-doctor](part3_images/2-book-appointment.png)
 
 - [X] Prescriptions | Dashboard:
   - The prescription tab on the dashboard allows you to view all of your prescriptions, and see information such as: The prescription ID, the doctor name and link to profile , and a button to view the prescription report. When you view the prescription as a pdf, you will see more indepth information such as the patient and the doctors contact information, the date of the prescription, the name of the medicine, how much they were prescribed, the frequency of taking the medicine, how long you have to take the medicine, whether you have to take the medicine with a meal or note, and other instructions that the doctor feels is necessary.
 After you click on Prescription, you can click view on one of the prescriptions.
 Now you will see an HTML rendering of the information the prescription pdf gives you.
 You may also click the Download Prescription button to view it as a pdf. 
-Medical Records | Dashboard
+Medical Records | Dashboard'
+
+![chat-doctor](part3_images/3-presecriptions.png)
  - [X] The medical records tab allows patients to see a summarized view of their patient record. In the summarized view the patient will be able to see all information about them, as well as see their history and diagnoses.After you click on the medical record, you can click to view it. You will see an HTML rendering of the information the patient record pdf gives you. You may also click the Download Report button to view it as a pdf.
+ ![chat-doctor](part3_images/4-medical-records.png)
 
 #### Doctor
 
 - [X] Patient Appointments | Dashboard
   - The patient appointments section shows the doctor how many appointments they lined up, and include information such as: the patient name, the appointment date, the purpose of the visit, the contact information of the patient, and the status of the appointment. The dashboard also shows how many appointments they have the next day, how many patients they have to see the current day, and their total amount of future appointments scheduled.
+  ![chat-doctor](part3_images/5-doctor-appointments.png)
 
 
 - [X] Appointment | Dashboard
@@ -47,18 +53,21 @@ Medical Records | Dashboard
   - Click on the patient to go directly to the patient profile
   - Click on View button to see a pop up summary of the appointment
   - You can either accept or reject the appointment
+  ![chat-doctor](part3_images/6-d-appointments.png)
 - [X} Patient ID | Dashboard
 	- This feature allows you to input the patient id number, and be taken directly to their profile.
 
-
+	![chat-doctor](part3_images/7-patient-id.png)
 
 - [X] My Patients | Dashboard
 	- This feature on the dashboard allows the doctor to view all of their patients profiles, as well as some summarized information on them such as: their patient id, their address, their phone number, their age, and their blood type. 
+	
 
 
 #### Admin
 - [X] Dashboard
 	- Can view information such as total doctors, total patients, total hospitals, and total lab workers.
+![chat-doctor](part3_images/8-admin-dashboard.png)
 
 - [X] Hospitals | Dashboard
 	Can add and edit information for the hospital, as well as emergency information.
@@ -70,15 +79,19 @@ Medical Records | Dashboard
 #### Clinical Staff
 - [X] Dashboard
 	- Can view a list of patients, the list of tests, a list of tasks, a search bar for patients through their id, and patient records.
+	![chat-doctor](part3_images/9-staff-dashboard.png)
 
 - [X] Patient List | Dashboard
 	- Can view reports of patients and their basic information.
+	![chat-doctor](part3_images/10-staff-list.png)
 
 - [X] Patient ID | Dashboard
 	- Can search patients by their ID.
+	![chat-doctor](part3_images/11-staff-id.png)
 
 - [X] Records | Dashboard
 	- Can view patient records
+	![chat-doctor](part3_images/12-records.png)
 
 
 
