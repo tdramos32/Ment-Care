@@ -24,8 +24,36 @@ system as it only targeted boh patients and doctor. In their design, only patien
 rejecting the appointment request. So their system was based on a one-to-one system where patients and doctors are fully in control of the system.
 - Our design uses a different structure where both doctors & patients do not need to communicate with one another through a server. Everything is done through a middleman, in this case which is
 the Health Staff. Here is an example below.
+![UML IMAGE](part2_images/UML_Diagram.png)
 
+#### As we can see above, the design works well as there is a 'checks and balances'
+##### Adminstrators:
+- They are able to view the entire system
+  - They are able to see of the appointments charts and which doctors are in the system. They are the super user if you like
+- They are also able to enter hospital workers such as doctors and staff
+- They also have the power to delete such worker
+- In other words, their hands can reach every where.
 
+##### Patients:
+ - Patients can request an appointment
+ - They are also able to view their records
+ - Everytime they login, they are faced with an opportunity to express how they feel.
+ 
+##### Doctors:
+- They are able to see who has an appointment for that day.
+- However, they do not decide whether to accept or reject an appointment.
+- They are capable of seeing the mood records of their patients.
+
+##### Health Staff:
+- They are what we consider the middleman of our system. Any possible forms between the patient and the doctor goes through them.
+  - They accept appointments
+  - Create appointments
+  - Create reports
+  - accept meeting notes from doctor
+ 
+#### Our Design was better
+- Although the codebases that we orked on had some pretty good implementations, i believe that our changes would definitely make their implementations 
+better. However, that is also an unfair assessment. Their system meant to serve as system between simply a doctor from a hospital and a patient. The domain of that field was nonexistent. This design process would only make it harder for the doctor as he must be able to do everything by himself. From checking his patients onto being up-to-date with system, that would be pretty daunting. Our system meant to simplify that process by giving the doctor less work and have him access to data on patients such as their moods, social media toxicity.
 ---
 ## PROCESS OVERVIEW
 ### Satisfactory
@@ -33,7 +61,6 @@ the Health Staff. Here is an example below.
 - [X] Process overview contains a detailed description of the manner in which agile project management processes were used during the project (i.e., sprints, sprint reviews, retrospectives and blameless reviews).
 - [X] It provides a summary of what was planned to happen in each sprint vs what actually happened, with a discussion of what was revised as a result.
 - [X] The document is at most 2 pages (fewer pages are absolutely acceptable, consider this a rough limit)
-
 
 
 
