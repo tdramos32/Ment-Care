@@ -54,9 +54,6 @@ Medical Records | Dashboard
 
 - [X] My Patients | Dashboard
 	- This feature on the dashboard allows the doctor to view all of their patients profiles, as well as some summarized information on them such as: their patient id, their address, their phone number, their age, and their blood type. 
-	
-= [X] Profile Settings | Dashboard
-	- This feature allows you to put in all basic profile information, as well as upload a profile picture, change their pricing, and add in education and experience they have. 
 
 
 
