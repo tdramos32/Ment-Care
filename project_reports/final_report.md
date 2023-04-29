@@ -63,7 +63,23 @@ better. However, that is also an unfair assessment. Their system meant to serve 
 - [X] The document is at most 2 pages (fewer pages are absolutely acceptable, consider this a rough limit)
 
 #### Agile Methodology
-###### We used the agile methodology to the best of what we could.
+- [ ] Sprints
+  - Some of our sprint included
+    - [X] Appointment Diary System
+      - They purpose of this sprint was to be able to somehow be able to send confirmation messages to the patient after their patient has submitted an appointment
+      - Most of the functionalities were finished except that part.
+    - [X] Patient Mood analysis
+      - This task required us that we ask the patient for input on how their daqy was and be able to continously track their progress as days went.
+      - This task was complete and we even had a couple more days than we needed.
+      - We proceeded to use that time by using a model to be able to classify the patients input to either negative or positive.
+  - So in one sprint, we didnt have anough time to completely be able to finish with our plan, but in the second we had enough time so we added more to be able to enhance it.
+- [ ] Sprint reviews
+  - We continously strived to make Sprint reviews after each sprint.
+  - In some cases, we weren't able to finish some tasks by the end of the sprint, so we left it behind to implement other things.
+- [ ] Continous development
+  - We were continously making changes to our github branch.
+- [ ] Strong on collaboration
+  - We collaborated instensively throughout the course of the project.
 
 
 
