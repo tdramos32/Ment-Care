@@ -35,7 +35,7 @@ SECRET_KEY = env('SECRET_KEY')
 #SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env('DEBUG')
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 # ALLOWED_HOSTS = ['mobile view', 'local host','ngrok -- keeps on changing']
