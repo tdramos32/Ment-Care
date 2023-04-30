@@ -29,6 +29,5 @@ torchaudio --index-url https://download.pytorch.org/whl/cpu
 psycopg2-binary
 gunicorn
 django-on-heroku
-whitenoise
 transformers
 tk
