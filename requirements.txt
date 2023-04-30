@@ -31,3 +31,4 @@ gunicorn
 django-on-heroku
 whitenoise
 transformers
+tk
