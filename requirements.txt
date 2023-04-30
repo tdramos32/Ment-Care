@@ -19,12 +19,10 @@ virtualenv==20.14.1
 whitenoise==6.2.0
 widgetsnbextension==3.5.2
 xhtml2pdf==0.2.8
-tk
 numpy
 transformers
 djangorestframework-simplejwt
 psycopg2-binary
 gunicorn
-django-on-heroku
 transformers
 python3-tk
