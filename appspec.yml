@@ -2,9 +2,9 @@ version: 0.0
 os: linux
 files: 
   - source: /
-    destination: /home/ubuntu/blogprojectdrf
+    destination: /home/ubuntu/490-proj
 permissions:
-  - object: /home/ubuntu/blogprojectdrf
+  - object: /home/ubuntu/490-proj
     owner: ubuntu
     group: ubuntu
 hooks:
