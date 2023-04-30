@@ -1,0 +1,41 @@
+<div class="sidebar" id="sidebar">
+    <div class="sidebar-inner slimscroll">
+        <div id="sidebar-menu" class="sidebar-menu">
+            <ul>
+                <li class="menu-title"> 
+                    <span>Menu</span>
+                </li>
+                
+            </ul>
+            <ul>
+                
+                <li class=""> 
+                    <a href="{%url 'Health_Staff:mypatient-list' %}"><i class="fe fe-user"></i> <span>Patient List</span></a>
+                </li>
+
+            </ul>
+            <ul>
+
+                <li class=""> 
+                    <a href="{%url 'Health_Staff:test-list' %}"><i class="fe fe-document"></i> <span>Test List</span></a>
+                </li>
+
+            </ul>
+
+            <li class="nav-item has-submenu">
+          
+                <a href="#" class="nav-link"><i class="fas fa-search"></i><span>Patient ID</span></a>
+                  <ul class="submenu collapse" style="padding:19px">
+                    <form action="{% url 'Health_Staff:patient-search' %}"   method="GET"> 
+                        <input type="text" class="form-control" placeholder="search" name="search_query" value="{{search_query}}">
+                    </form>
+                </ul>
+              
+            </li>
+
+
+
+            
+        </div>
+    </div>
+</div>

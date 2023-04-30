@@ -37,6 +37,7 @@ from xhtml2pdf import pisa
 from .models import Report
 from django.views.decorators.csrf import csrf_exempt
 from mood.models import Mood
+from django.urls import reverse
 
 # Create your views here.
 
@@ -85,7 +86,7 @@ def patient_id(request):
 @cache_control(no_cache=True, must_revalidate=True, no_store=True)
 def logoutDoctor(request):
     user = User.objects.get(id=request.user.id)
-    if user.is_doctor:
+    if user.is_doctor or user.is_labworker:
         user.login_status == "offline"
         user.save()
         logout(request)
@@ -122,9 +123,8 @@ def doctor_register(request):
 
 @csrf_exempt
 def doctor_login(request):
-    # page = 'patient_login'
     if request.method == 'GET':
-        return render(request, 'doctor-login.html')
+        return render(request, 'doctor-login.html')# page = 'patient_login'
     elif request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
@@ -139,14 +139,20 @@ def doctor_login(request):
         if user is not None:
             
             login(request, user)
-            if request.user.is_doctor:
+            if request.user.is_doctor :
                 # user.login_status = "online"
                 # user.save()
                 messages.success(request, 'Welcome Doctor!')
+
+            
                 return redirect('doctor-dashboard')
+            if request.user.is_labworker:
+                messages.success(request,'Welcome Staff')
+                return redirect (reverse('Health_Staff:staff-dashboard'))
+                
             else:
                 messages.error(request, 'Invalid credentials. Not a Doctor')
-                return redirect('doctor-logout')   
+                return redirect('doctor-logout')  
         else:
             messages.error(request, 'Invalid username or password')
             
@@ -183,7 +189,7 @@ def doctor_dashboard(request):
 @login_required(login_url="doctor-login")
 def appointments(request):
     doctor = Doctor_Information.objects.get(user=request.user)
-    appointments = Appointment.objects.filter(doctor=doctor).filter(appointment_status='pending').order_by('date')
+    appointments = Appointment.objects.filter(doctor=doctor).filter(appointment_status='confirmed').order_by('date')
     context = {'doctor': doctor, 'appointments': appointments}
     return render(request, 'appointments.html', context) 
  
@@ -224,10 +230,7 @@ def accept_appointment(request, pk):
     html_message = render_to_string('appointment_accept_mail.html', {'values': values})
     plain_message = strip_tags(html_message)
     
-    try:
-        send_mail(subject, plain_message, 'hospital_admin@gmail.com',  [patient_email], html_message=html_message, fail_silently=False)
-    except BadHeaderError:
-        return HttpResponse('Invalid header found')
+    
     
     messages.success(request, 'Appointment Accepted')
     
@@ -256,12 +259,6 @@ def reject_appointment(request, pk):
     
     html_message = render_to_string('appointment_reject_mail.html', {'values': values})
     plain_message = strip_tags(html_message)
-    
-    try:
-        send_mail(subject, plain_message, 'hospital_admin@gmail.com',  [patient_email], html_message=html_message, fail_silently=False)
-    except BadHeaderError:
-        return HttpResponse('Invalid header found')
-    
     messages.error(request, 'Appointment Rejected')
     
     return redirect('doctor-dashboard')
@@ -445,11 +442,6 @@ def booking(request, pk):
             
             html_message = render_to_string('appointment-request-mail.html', {'values': values})
             plain_message = strip_tags(html_message)
-            
-            try:
-                send_mail(subject, plain_message, 'hospital_admin@gmail.com',  [patient_email], html_message=html_message, fail_silently=False)
-            except BadHeaderError:
-                return HttpResponse('Invalid header found')
         
         
         messages.success(request, 'Appointment Booked')
@@ -476,6 +468,7 @@ def my_patients(request):
 # def patient_profile(request):
 #     return render(request, 'patient_profile.html')
 
+
 @csrf_exempt
 @login_required(login_url="doctor-login")
 def patient_profile(request, pk):
@@ -486,7 +479,8 @@ def patient_profile(request, pk):
         appointments = Appointment.objects.filter(doctor=doctor).filter(patient=patient)
         prescription = Prescription.objects.filter(doctor=doctor).filter(patient=patient)
         report = Report.objects.filter(doctor=doctor).filter(patient=patient) 
-        mood = Mood.objects.filter(user = 'patient2').all()
+        mood = Mood.objects.filter(user = patient.username).all()
+        print(patient.username)
     else:
         redirect('doctor-logout')
     context = {'doctor': doctor, 'appointments': appointments, 'patient': patient, 'prescription': prescription, 'report': report, 'mood':mood}  
@@ -695,6 +689,7 @@ def doctor_review(request, pk):
         return render(request, 'doctor-profile.html', context)
     else:
         logout(request)
+        
  
  
    
