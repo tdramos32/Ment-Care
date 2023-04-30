@@ -25,4 +25,4 @@ djangorestframework-simplejwt
 psycopg2-binary
 gunicorn
 transformers
-python3-tk
+tk
