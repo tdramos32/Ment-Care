@@ -1,7 +1,7 @@
 --find-links https://download.pytorch.org/whl/torch_stable.html
 torch==1.13.0+cpu
 --find-links https://download.pytorch.org/whl/torch_stable.html
-torchvision==0.1.6+cpu
+torchvision==0.15.0+cpu
 
 certifi==2022.12.7
 charset-normalizer==2.0.11
