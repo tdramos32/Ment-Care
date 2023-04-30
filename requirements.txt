@@ -27,4 +27,4 @@ psycopg2-binary
 gunicorn
 django-on-heroku
 transformers
-tk
+python3-tk
