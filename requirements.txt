@@ -23,9 +23,6 @@ tk
 numpy
 transformers
 djangorestframework-simplejwt
-torch --index-url https://download.pytorch.org/whl/cpu
-torchvision --index-url https://download.pytorch.org/whl/cpu
-torchaudio --index-url https://download.pytorch.org/whl/cpu
 psycopg2-binary
 gunicorn
 django-on-heroku
