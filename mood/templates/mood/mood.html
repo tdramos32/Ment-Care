@@ -1,13 +1,40 @@
 {% load static %}
    
-<link rel="stylesheet" href="{% static 'mood/style.css' %}">
+<!--<link rel="stylesheet" href="{% static 'mood/style.css' %}"> -->
+ <!-- Favicons -->
+ <link
+ type="image/x-icon"
+ href="{% static 'HealthStack-System/images/Normal/favicon.png' %}"
+ rel="icon"
+/>
 
+<!-- Bootstrap CSS -->
+<link
+ rel="stylesheet"
+ href="{% static 'HealthStack-System/css/Normal/bootstrap.min.css' %}"
+/>
+
+<!-- Fontawesome CSS -->
+<link
+ rel="stylesheet"
+ href="{% static 'HealthStack-System/plugins/Normal/fontawesome/css/fontawesome.min.css' %}"
+/>
+<link
+ rel="stylesheet"
+ href="{% static 'HealthStack-System/plugins/Normal/fontawesome/css/all.min.css' %}"
+/>
+<center>
+<!-- Main CSS -->
+<link
+ rel="stylesheet"
+ href="{% static 'HealthStack-System/css/Normal/style.css' %}"
+/>
 <div class="intro">
     <div class="hello">
         <h1>Hello {{ user.username}}</h1>
     </div>
     <div class="sometext">
-        <h2>How Are You Feeling Now</h2>
+        <h2>How are you feeling?</h2>
     </div>
 
     <div class="form-class">
@@ -16,14 +43,12 @@
         <form action="" method="post">
             {% csrf_token %}
             <div>
-                <input type="text" placeholder = "Enter How you are feeling"  name = "mood" required>
+                <input type="text" placeholder = "enter how you are feeling"  name = "mood" required>
             </div>
 
        
             <button>Submit</button>
         </form>
     </div>
-    
-
-
 </div>
+</center>
