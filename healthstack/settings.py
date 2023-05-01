@@ -55,7 +55,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'ChatApp.apps.ChatappConfig',
     'debug_toolbar',
-    'record_system.apps.RecordSystemConfig'
+    'record_system.apps.RecordSystemConfig',
+    'Health_Staff.apps.HealthStaffConfig',
  
  
 ]
