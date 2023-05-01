@@ -1,13 +1,31 @@
 # Ment-Care
 ---
-### The Purpose Of This Project is To give both clinic staff and doctors better tools to help in the treatment of Mental health of Patients. This information System which we are going to build will only focus on things that are related to the mental health of the patient. Some examples can include:
-  1. An analysis of the mood of a patient through diary like sysem where we ask a patient how he has been feeling on a daily.
-  1. Take into account how often a patient has been switching home address which can indicate that they might be homeless which can indicate a severe     mental crisis
-  1. The doctores and clinic staff will be able to view these personal information of the patient to be able to learn about the patient quickly even if they have never met before.
-  
----
+## To Run The Project on linux
+
+#### install a python virtual environement
 
 ```
+python -m venv venv
+```
+
+#### Activate that environement
+
+```
+source venv/bin/activate
+```
+
+#### Install all the the required packages
+```
+pip install -r requirements.txt
+```
+#### Navigate to the folder that contains manage.py file
+```
+python manage.py runserver
+```
+#### On Your Browser, Navigate to 127.0.0.1:8000
+
+#### Link to The App
+[link](http://18.119.108.118/)
 
 
 
