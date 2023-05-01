@@ -11,6 +11,9 @@ from datetime import date
 
 def mood(request):
     user = request.user
+
+    if request.method == "POST":
+         return redirect(reverse('patient-dashboard'))
    
    
     
