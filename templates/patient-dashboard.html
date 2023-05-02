@@ -116,14 +116,7 @@
                           ><span class="med-records">Medical Records</span></a
                         >
                       </li>
-                      <li class="nav-item">
-                        <a
-                          class="nav-link"
-                          href="#pat_billing"
-                          data-toggle="tab"
-                          >Billing</a
-                        >
-                      </li>
+                    
                     </ul>
                   </nav>
                   <!-- /Tab Menu -->
@@ -146,8 +139,7 @@
                                   <th>Type</th>
                                   <th>Amount</th>
                                   <th>Status</th>
-                                  <th>Payment Status</th>
-                                  <th>Action</th>
+                                 
                                 </tr>
                               </thead>
                               <tbody>
@@ -182,9 +174,9 @@
                                   <td>{{appointment.appointment_type}}</td>
                                   
                                   {% if appointment.appointment_type == 'checkup' %}
-                                  <td>{{appointment.doctor.consultation_fee}} BDT</td>
+                                  <td>${{appointment.doctor.consultation_fee}}</td>
                                   {% else %}
-                                  <td>{{appointment.doctor.report_fee}} BDT</td>
+                                  <td>${{appointment.doctor.report_fee}}</td>
                                   {% endif %}
                                   <td>
                                     {% if appointment.appointment_status == 'pending' %}
@@ -197,27 +189,7 @@
                                     <span class="badge badge-pill bg-danger-light">Cancelled</span>
                                     {% endif %}
                                   </td>
-                                  <td class="text-center">
-                                    {% if appointment.payment_status == 'pending' %}
-                                    <span class="badge badge-pill bg-warning-light">Pending</span>
-                                    {% endif %}
-                                    {% if appointment.payment_status == 'VALID' %}
-                                    <span class="badge badge-pill bg-success-light">Paid</span>
-                                    {% endif %}
-                                  </td>
-
-                                  <td >
-                                    <div class="table-action">
-                                      <a
-                                        href="{% url 'ssl-payment-request' pk=appointment.patient.patient_id id=appointment.id %}"
-                                        class="btn btn-sm bg-success-light"
-                                      >
-                                        <i class="fas fa-dollar-sign"></i> Pay
-                                        Now
-                                      </a>
-                                      
-                                    </div>
-                                  </td>
+                                 
                                 </tr>
                                 {% endfor %}
                               </tbody>
