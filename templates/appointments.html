@@ -68,7 +68,6 @@
     </div>
     <!-- /Breadcrumb -->
 
-<<<<<<< HEAD
       <!-- Page Content -->
       <div class="content">
         <div class="container-fluid">
@@ -111,63 +110,11 @@
                           <i class="fas fa-envelope"></i> {{app.patient.email}}
                         </h5>
                         
-                        <h5>
-                          {% if app.payment_status == 'pending' %}
-                          <i class="fas fa-money-check-alt"></i> <span class="badge badge-pill bg-warning-light">Payment Status: Pending</span>
-                          {% endif %}
-                          {% if app.payment_status == 'VALID' %}
-                          <i class="fas fa-money-check-alt"></i> <span class="badge badge-pill bg-success-light">Payment Status: Paid</span>
-                          {% endif %}
-                        </h5>
+                       
                         <h5 class="mb-0">
-                          <i class="fas fa-phone"></i> +880{{app.patient.phone_number}}
+                          <i class="fas fa-phone"></i>{{app.patient.phone_number}}
                         </h5>
                       </div>
-=======
-    <!-- Page Content -->
-    <div class="content">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
-            <!-- Profile Sidebar -->
-            <div>{% include 'doctor-sidebar.html' %}</div>
-            <!-- /Profile Sidebar -->
-          </div>
-
-          <div class="col-md-7 col-lg-8 col-xl-9">
-            <div class="appointments">
-              <!-- Appointment List -->
-              {% for app in appointments %}
-              <div class="appointment-list">
-                <div class="profile-info-widget">
-                  <a href="patient-profile.html" class="booking-doc-img">
-                    <img src="{{app.patient.featured_image.url}}" alt="User Image" />
-                  </a>
-                  <div class="profile-det-info">
-                    <h3><a href="{%url 'patient-profile' pk=app.patient.patient_id%}">{{app.patient.name}}</a></h3>
-
-                    <div class="patient-details">
-                      <h5>
-                        <i class="fas fa-file"></i>Appoinment Serial No: #PT{{app.serial_number}}
-                      </h5>
-                      <h5>
-                        <i class="far fa-clock"></i> {{app.date}} {{app.time}}
-                      </h5>
-                      <h5>
-                        <i class="fas fa-briefcase-medical"></i> Purpose: {{app.appointment_type}}
-                      </h5>
-                      <h5>
-                        <i class="fas fa-map-marker-alt"></i>{{app.patient.address}}
-                      </h5>
-                      <h5>
-                        <i class="fas fa-envelope"></i> {{app.patient.email}}
-                      </h5>
-
-
-                      <h5 class="mb-0">
-                        <i class="fas fa-phone"></i> +880{{app.patient.phone_number}}
-                      </h5>
->>>>>>> prod
                     </div>
                   </div>
                 </div>
