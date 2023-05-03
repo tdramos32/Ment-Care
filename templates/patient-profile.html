@@ -158,6 +158,12 @@
                 <li class="nav-item">
                   <a class="nav-link" href="#mood_records" data-toggle="tab"><span> Patient Moods</span></a>
                 </li>
+                {% if gottwitter %}
+                <li class="nav-item">
+                  <a class="nav-link" href="#twitter_records" data-toggle="tab"><span> Twitter Records</span></a>
+                </li>
+
+                {% endif %}
 
               </ul>
             </div>
@@ -363,6 +369,7 @@
             </div>
           </div>
           <!--Start of mood-records-->
+          
           <div class="tab-pane fade" id="mood_records">
             <div class="text-right">
             </div>
@@ -415,6 +422,72 @@
               </div>
             </div>
           </div>
+
+      
+         
+            <!--Start of twitter-records-->
+            <div class="tab-pane fade" id="twitter_records">
+              <div class="text-right">
+              </div>
+              <div class="card card-table mb-0">
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table table-hover table-center mb-0">
+                      <thead>
+                        <tr>
+                          <th>Tweet</th>
+                          <th>toxic</th>
+                          <th>severe_toxic</th>
+                          <th>obscene</th>
+                          <th>threat</th>
+                          <th>insult</th>
+                          <th>identity hate</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {% for tweet in tweets %}
+                        <tr>
+                          <td>
+                            {{tweet.tweet}}
+                      
+                          </td>
+                          <td>{{tweet.toxic}}</td>
+                          <td>
+                            {{tweet.severe_toxic}}
+  
+                          </td>
+  
+                          <td>
+                            {{tweet.obscene}}
+  
+                          </td>
+                          <td>
+                            {{tweet.threat}}
+  
+                          </td>
+                          <td>
+                            {{m.insult}}
+  
+                          </td>
+                          <td>
+                            {{tweet.identity_hate}}
+  
+                          </td>
+  
+                        </tr>
+                        {% endfor %}
+                        </tr>
+                      </tbody>
+                    </table>
+  
+  
+  
+  
+                  </div>
+                </div>
+              </div>
+            </div>
+         
           <!-- <div class="tab-pane fade" id="mood_records">
     {% for m in mood%}
     {{m.input}}
