@@ -197,9 +197,9 @@
             <div class="hello">
                 <h1>Hello {{ user.username}}</h1>
             </div>
-            <div class="sometext">
+            <!-- <div class="sometext">
                 <h2>How are you feeling?</h2>
-            </div>
+            </div> -->
         
             <div class="form-class">
         
@@ -207,8 +207,21 @@
                 <form action="" method="post">
                     {% csrf_token %}
                     <div>
-                        <input type="text" placeholder = "enter how you are feeling"  name = "mood" required>
+                        <label for="mood">Feeling</label>
+                        <input type="text" placeholder = "enter how you are feeling"  name = "mood" id = "mood" required>
                     </div>
+                    {% if gottwitter %}
+
+                  
+                    {% else %}
+
+                    <div>
+                      
+                      <label for="twitter">Add Twitter?</label>
+                      <input type="text" placeholder = "You can Add Your Twitter username header"  name = "twitter" id = "twitter">
+                    </div>
+
+                    {% endif %}
         
                
                     <button>Submit</button>
