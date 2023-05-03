@@ -23,17 +23,19 @@
                     <a href="#"><i class="fe fe-user-plus"></i> <span>Doctors</span></a>
                     <ul style="display:none;">
                         <li><a href="{%url 'register-doctor-list'%}"><i class="fe fe-users"></i> <span>Registered</span></a></li>
+                        <li><a href="{%url 'add-doctor'%}"><i class="fe fe-users"></i> <span>Add Doctor</span></a></li>
                         <li><a href="{%url 'pending-doctor-list'%}"><i class="fe fe-users"></i> <span>Pending</span></a></li>
+                       
                     </ul>
                 </li>
                 
                 
 
                 <li class="submenu">
-                    <a href="#"><i class="fe fe-user"></i> <span> Lab Worker</span></a>
+                    <a href="#"><i class="fe fe-user"></i> <span> Clinic Staff</span></a>
                     <ul style="display:none;">
-                        <li><a href="{% url 'add-lab-worker' %}"><i class="fe fe-user-plus"></i> <span>Add Lab Worker</span></a></li>
-                        <li><a href="{% url 'lab-worker-list' %}"><i class="fe fe-users"></i> <span>View Lab Worker</span></a></li>
+                        <li><a href="{% url 'add-lab-worker' %}"><i class="fe fe-user-plus"></i> <span>Add Clinic Staff</span></a></li>
+                        <li><a href="{% url 'lab-worker-list' %}"><i class="fe fe-users"></i> <span>View Clinic Staff</span></a></li>
                     </ul>
                 </li>
 

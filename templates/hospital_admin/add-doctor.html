@@ -63,10 +63,10 @@
 							<nav aria-label="breadcrumb" class="page-breadcrumb">
 								<ol class="breadcrumb">
 									<li class="breadcrumb-item"><a href="index-2.html">Home</a></li>
-									<li class="breadcrumb-item active" aria-current="page">Create Clinic Staff Worker</li>
+									<li class="breadcrumb-item active" aria-current="page">Create Doctor</li>
 								</ol>
 							</nav>
-							<h2 class="breadcrumb-title" style="text-align: center">Add Clinic Health Staff</h2>
+							<h2 class="breadcrumb-title" style="text-align: center">Add Doctor User</h2>
 						</div>
 					</div>
 				</div>
@@ -81,7 +81,7 @@
 							<div class="card">
 								<div class="card-header">
 									<!-- Profile Settings Form -->
-									<form action="{% url 'add-lab-worker' %}" method="POST" enctype="multipart/form-data" >
+									<form action="{% url 'add-doctor' %}" method="POST" enctype="multipart/form-data" >
 										{% csrf_token %}
 
                                                     {% for field in form %}
