@@ -38,6 +38,7 @@ from .models import Report
 from django.views.decorators.csrf import csrf_exempt
 from mood.models import Mood
 from django.urls import reverse
+from mood.models import Tweets, Twitter
 
 # Create your views here.
 
@@ -480,10 +481,17 @@ def patient_profile(request, pk):
         prescription = Prescription.objects.filter(doctor=doctor).filter(patient=patient)
         report = Report.objects.filter(doctor=doctor).filter(patient=patient) 
         mood = Mood.objects.filter(user = patient.username).all()
-        print(patient.username)
+        has_twitter = int(len(Twitter.objects.filter(user = patient.username))) > 0
+
+
+       
     else:
         redirect('doctor-logout')
-    context = {'doctor': doctor, 'appointments': appointments, 'patient': patient, 'prescription': prescription, 'report': report, 'mood':mood}  
+    if has_twitter == False:
+        context = {'doctor': doctor, 'appointments': appointments, 'patient': patient, 'prescription': prescription, 'report': report, 'mood':mood, 'gottwitter':has_twitter}  
+        return render(request, 'patient-profile.html', context)
+    tweets = Tweets.objects.filter(user = patient.username).all()
+    context = {'doctor': doctor, 'appointments': appointments, 'patient': patient, 'prescription': prescription, 'report': report, 'mood':mood, 'gottwitter':has_twitter, 'tweets':tweets} 
     return render(request, 'patient-profile.html', context)
 
 
