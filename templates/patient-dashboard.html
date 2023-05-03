@@ -168,9 +168,12 @@
                                   </td>
                                  <!-- Add event button  -->
                                   <td>
-                                  <form method="post"  date="{{appointment.date}}" time={{appointment.time}}>
+                                  <form method="POST">
                                     {% csrf_token %}
-                                  <button type="submit" name="Add_Event" >Add Event To<br>Calendar</button>
+                                  <button type="submit" test="test" name="Add_Event" >Add Event To<br>Calendar</button>
+                                  <input type="hidden" name="date" value="{{appointment.date}}"></input>
+                                  <input type="hidden" name="time" value="{{appointment.time}}"></input>
+                                  
                                   </form> 
                                   
                                         

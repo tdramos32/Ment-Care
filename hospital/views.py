@@ -34,11 +34,7 @@ from django.template.loader import render_to_string
 from django.utils.html import strip_tags
 from django.views.decorators.csrf import csrf_exempt
 from django.urls import reverse_lazy,reverse
-from google_calender.add_event import make_event
-from google_calender.Google import *
-from google_calender.google_apis import *
-
-
+from hospital.add_event import *
 # Create your views here.
 @csrf_exempt
 def hospital_home(request):
@@ -227,7 +223,12 @@ def patient_dashboard(request):
         payments = Payment.objects.filter(patient=patient).filter(appointment__in=appointments).filter(payment_type='appointment').filter(status='VALID')
         context = {'patient': patient, 'appointments': appointments, 'payments': payments,'report':report,'prescription':prescription}
         if request.method == 'POST' and 'Add_Event' in request.POST:
-            make_event(request.date, request.time) 
+            request_date = request.POST['date'] 
+            request_time = request.POST['time']
+            print("IN VIEW RAW FORM DATA:", request.POST['time'], request.POST['date'])
+            print("IM IN VIEW", request_date, request_time)
+            print(request)
+            make_event(request_date, request_time) 
 
     else:
         return redirect('logout')
