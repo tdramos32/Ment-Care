@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'debug_toolbar',
     'record_system.apps.RecordSystemConfig',
     'Health_Staff.apps.HealthStaffConfig',
+    'google_calender.apps.GoogleCalenderConfig',
  
  
 ]
