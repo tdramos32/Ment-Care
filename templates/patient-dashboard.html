@@ -135,6 +135,7 @@
                               <thead>
                                 <tr>
                                   <th>Doctor</th>
+                                  <th>Add to Google Calendar</th>
                                   <th>Appt Date</th>
                                   <th>Type</th>
                                   <th>Amount</th>
@@ -164,6 +165,15 @@
                                         ></a
                                       >
                                     </h2>
+                                  </td>
+                                 <!-- Add event button  -->
+                                  <td>
+                                  <form method="post">
+                                    {% csrf_token %}
+                                  <button type="submit" name="Add_Event">Add Event To<br>Calendar</button>
+                                  </form> 
+                                  
+                                        
                                   </td>
                                   <td>
                                     {{appointment.date}}

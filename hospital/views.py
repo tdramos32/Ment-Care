@@ -34,6 +34,7 @@ from django.template.loader import render_to_string
 from django.utils.html import strip_tags
 from django.views.decorators.csrf import csrf_exempt
 from django.urls import reverse_lazy,reverse
+from google_calender.add_event import *
 
 
 # Create your views here.
@@ -223,6 +224,9 @@ def patient_dashboard(request):
         appointments = Appointment.objects.filter(patient=patient).filter(Q(appointment_status='pending') | Q(appointment_status='confirmed'))
         payments = Payment.objects.filter(patient=patient).filter(appointment__in=appointments).filter(payment_type='appointment').filter(status='VALID')
         context = {'patient': patient, 'appointments': appointments, 'payments': payments,'report':report,'prescription':prescription}
+        if request.method == 'POST' and 'Add_Event' in request.POST:
+            function_to_run() 
+
     else:
         return redirect('logout')
         
