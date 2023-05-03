@@ -15,7 +15,8 @@ from pharmacy.models import Medicine, Pharmacist
 from doctor.models import Doctor_Information, Prescription, Prescription_test, Report, Appointment, Experience , Education,Specimen,Test
 from pharmacy.models import Order, Cart
 from sslcommerz.models import Payment
-from .forms import AdminUserCreationForm, LabWorkerCreationForm, EditHospitalForm, EditEmergencyForm,AdminForm , PharmacistCreationForm 
+from .forms import AdminUserCreationForm, LabWorkerCreationForm, EditHospitalForm, EditEmergencyForm,AdminForm , PharmacistCreationForm
+from doctor.forms import DoctorUserCreationForm
 
 from .models import Admin_Information,specialization,service,hospital_department, Clinical_Laboratory_Technician, Test_Information
 import random,re
@@ -1062,3 +1063,62 @@ def report_history(request):
             context = {'report':report,'lab_workers':lab_workers}
             return render(request, 'hospital_admin/report-list.html',context)
 
+
+
+@csrf_exempt
+@login_required(login_url='admin_login')
+def add_doctor(request):
+    page = 'add-doctor'
+    form = DoctorUserCreationForm()
+    user = Admin_Information.objects.get(user=request.user)
+    if request.method == 'POST':
+        form = DoctorUserCreationForm(request.POST)
+        if form.is_valid():
+            # form.save()
+            # commit=False --> don't save to database yet (we have a chance to modify object)
+            user = form.save(commit=False)
+            user.is_doctor = True
+            # user.username = user.username.lower()  # lowercase username
+            user.save()
+
+            messages.success(request, 'Doctor account was created!')
+            print("Doctor was created")
+
+            # After user is created, we can log them in
+            #login(request, user)
+            return redirect('admin-dashboard')
+
+        else:
+            messages.error(request, 'An error has occurred during registration')
+
+    context = {'form': form, 'admin': user}
+    return render(request, 'hospital_admin/add-doctor.html', context)
+
+# @csrf_exempt
+# @login_required(login_url='admin_login')
+
+# def add_lab_worker(request):
+#     if request.user.is_hospital_admin:
+#         user = Admin_Information.objects.get(user=request.user)
+        
+#         form = LabWorkerCreationForm()
+     
+#         if request.method == 'POST':
+#             form = LabWorkerCreationForm(request.POST)
+#             if form.is_valid():
+#                 # form.save(), commit=False --> don't save to database yet (we have a chance to modify object)
+#                 user = form.save(commit=False)
+#                 user.is_labworker = True
+#                 user.save()
+
+#                 messages.success(request, 'Clinical Laboratory Technician account was created!')
+
+#                 # After user is created, we can log them in
+#                 #login(request, user)
+#                 return redirect('lab-worker-list')
+#             else:
+#                 messages.error(request, 'An error has occurred during registration')
+    
+#     context = {'form': form, 'admin': user}
+#     return render(request, 'hospital_admin/add-lab-worker.html', context)  
+ 

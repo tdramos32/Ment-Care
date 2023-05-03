@@ -112,3 +112,18 @@ class AdminForm(ModelForm):
          for name, field in self.fields.items():
              field.widget.attrs.update({'class': 'form-control'})
 
+class DoctorUserCreationForm(UserCreationForm):
+    class Meta:
+        model = User
+        # password1 and password2 are required fields (django default)
+        fields = ['username', 'email', 'password1', 'password2']
+        # labels = {
+        #     'first_name': 'Name',
+        # }
+
+    # create a style for model form
+    def __init__(self, *args, **kwargs):
+        super(DoctorUserCreationForm, self).__init__(*args, **kwargs)
+
+        for name, field in self.fields.items():
+            field.widget.attrs.update({'class': 'form-control'})
