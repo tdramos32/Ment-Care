@@ -8,8 +8,8 @@ from tensorflow.keras.layers import TextVectorization
 
 # df = pd.read_csv("./data/train.csv")
 # test_df = pd.read_csv('data/test.csv')
-df = pd.read_csv("C:/Users/simon/OneDrive/Desktop/NJIT/mentcare/mood/data/train.csv")
-test_df = pd.read_csv('C:/Users/simon/OneDrive/Desktop/NJIT/mentcare/mood/data/test.csv')
+df = pd.read_csv("C:/Users/Frore/Documents/GitHub/Ment-Care/api/Ment-Care/mood/data/train.csv")
+test_df = pd.read_csv('C:/Users/Frore/Documents/GitHub/Ment-Care/api/Ment-Care/mood/data/test.csv')
 
 MAX_FEATURES = 200000 #no. of words in vocab
 X = df['comment_text']
@@ -21,7 +21,7 @@ vectorizer = TextVectorization(max_tokens=MAX_FEATURES,
 vectorizer.adapt(X.values)
 
 
-model = tf.keras.models.load_model('C:/Users/simon/OneDrive/Desktop/NJIT/mentcare/mood/toxicity.h5')
+model = tf.keras.models.load_model('C:/Users/Frore/Documents/GitHub/Ment-Care/api/Ment-Care/mood/toxicity.h5')
 
 def score_comment(comment):
     vectorized_comment = vectorizer([comment])
