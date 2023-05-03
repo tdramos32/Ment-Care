@@ -1,12 +1,8 @@
-from pprint import pprint
 from hospital.Google import Create_Service, convert_to_RFC_datetime
 import re
 # from Google import Create_Service, convert_to_RFC_datetime
 
 def make_event(app_date, app_time):
-    print("-------------------------------------------------------")
-    print("app_date = ",app_date)
-    print("app_time = ",app_time)
     CLIENT_SECRET_FILE = 'credentials.json'
     API_NAME = 'calendar'
     API_VERSION = 'v3'
@@ -24,19 +20,14 @@ def make_event(app_date, app_time):
         calendar_list = service.calendarList().list(pageToken=page_token).execute()
         #loops through the list of all calendars
         for calendar_list_entry in calendar_list['items']:
-            pprint(calendar_list_entry['summary'])
             # if we find the calendar exists, then we skip making it, and go straight to creating event
             if 'Mentcare' == calendar_list_entry['summary']:
                 calendar_exists = True
                 calender_id = calendar_list_entry['id']
-                print("The calender id: ",calender_id)
-                pprint('mentcare is already in here man!!!')
                 break
         if calendar_exists == False:
-            pprint("The calendar DOESNT exist")
             response = service.calendars().insert(body=request_body).execute()
             calender_id = response['id']
-            pprint("The calender id: ",calender_id)
         # create an event using the date froma doctor model appointment 
         hour_adjustment = 4 # adjustment for New York timezone
         months = {
@@ -54,38 +45,16 @@ def make_event(app_date, app_time):
                 'December':12
                 }
         date_of_appointment = str(app_date).split() #index vals - 0:Month 1:Day w/ a comma 2: Year
-        # date_of_appointment[0] = months[ str(date_of_appointment[0]) ]
-        for x in date_of_appointment:
-            print("IN A LOOP:", x)
         date_of_appointment[0] = months[date_of_appointment[0]]
         date_of_appointment[1] = date_of_appointment[1][:len(date_of_appointment[1])-1]
         time_of_appointment = re.split(r'[\s:]',app_time) #expected to see ex. "6:12", so ind 0 is 6 and ind 1 is 12
-        for x in time_of_appointment:
-            print("IN A LOOP", x)
-
         for i in range(len(date_of_appointment)):
             date_of_appointment[i] = int(date_of_appointment[i])
         for i in range(len(time_of_appointment) - 1):
             time_of_appointment[i] = int(time_of_appointment[i])
-        if time_of_appointment[2] == 'ap':
-            time_of_appointment[0] = int(time_of_appointment[0]) + 12
-        # event_request_body = {
-        #     'start' : {
-        #         'dateTime': convert_to_RFC_datetime(2023, 8, 1, 12 + hour_adjustment, 30),
-        #         'timeZone':'America/New_York'
-        #         },
-        #     'end' : {
-        #         'dateTime': convert_to_RFC_datetime(2023, 8, 1, 12 + hour_adjustment + 1, 00),
-        #         'timeZone':'America/New_York'
-        #         },
-        #     'summary': 'Mentcare Doctor Appointment',
-        #     'description': 'Coming into NJIT hospital for a psychiatrist visit.',
-        #     'colorId': 3,
-        #     'status': 'confirmed',
-        #     'transparency': 'opaque',
-        #     'visibility': 'private',
-        #     'location': 'Newark, NJ',
-        # } 
+        if time_of_appointment[2] == 'am' and time_of_appointment[0] == 12:
+            time_of_appointment[0] = 0
+        print(time_of_appointment[0])
         event_request_body = {
             'start' : {
                 'dateTime': convert_to_RFC_datetime(date_of_appointment[2], 
@@ -126,7 +95,6 @@ def make_event(app_date, app_time):
                 supportsAttachments=supports_attachments,
                 body=event_request_body,
                 ).execute()
-        pprint(response)
         page_token = calendar_list.get('nextPageToken')
         if not page_token:
             break
