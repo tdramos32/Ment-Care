@@ -221,7 +221,10 @@ python manage.py runserver
   - We collaborated instensively throughout the course of the project.
 
 
-
+BIG THANKS TO @Jawwad-Fida
+My team and I only added things onto it that we thought would improve the system.
+This is a link to the original project:
+https://github.com/Jawwad-Fida/HealthStack-System
 
 
 
