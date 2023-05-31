@@ -31,6 +31,8 @@ python manage.py runserver
 ### Users:
 
 #### Patient
+- [x] Google API Feature        
+  - With the click of a button, through OAuth & The Google Calendar API, you can add an appointment to your Google Calendar    
 
 - [x] Chat with Doctor:
 
