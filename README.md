@@ -218,13 +218,13 @@ python manage.py runserver
   - We were continously making changes to our github branch.
   - For every feature we make, we create a seperate branch, and test it to make sure it will work before making a pull request.
 - [ ] Strong on collaboration
-  - We collaborated instensively throughout the course of the project.
+  - We collaborated instensively throughout the course of the project.       
 
 
-BIG THANKS TO @Jawwad-Fida
-My team and I only added things onto it that we thought would improve the system.
-This is a link to the original project:
-https://github.com/Jawwad-Fida/HealthStack-System
+BIG THANKS TO @Jawwad-Fida    
+My team and I only added things onto it that we thought would improve the system.      
+This is a link to the original project:      
+https://github.com/Jawwad-Fida/HealthStack-System      
 
 
 
