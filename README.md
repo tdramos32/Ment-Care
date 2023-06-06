@@ -8,7 +8,6 @@ This is a link to the original project:
 https://github.com/Jawwad-Fida/HealthStack-System      
      
      
-# Ment-Care
 ---
 ## To Run The Project on linux
 
