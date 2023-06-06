@@ -1,13 +1,11 @@
-# Ment-Care     
-
-##Senior Year Open Source Adaptation Team Project      
+#Senior Year Open Source Adaptation Team Project      
 
 BIG THANKS TO @Jawwad-Fida    
 My team and I  added features onto it that we thought would improve and add to the system.      
 This is a link to the original project:      
 https://github.com/Jawwad-Fida/HealthStack-System      
      
-     
+# Ment-Care     
 ---
 ## To Run The Project on linux
 
